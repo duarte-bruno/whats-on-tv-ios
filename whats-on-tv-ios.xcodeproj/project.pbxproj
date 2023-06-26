@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		752724112A49F2C4002A277C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724102A49F2C4002A277C /* AppDelegate.swift */; };
+		752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724122A49F2C4002A277C /* SceneDelegate.swift */; };
+		752724152A49F2C4002A277C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724142A49F2C4002A277C /* ViewController.swift */; };
+		752724182A49F2C4002A277C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752724162A49F2C4002A277C /* Main.storyboard */; };
+		7527241A2A49F2C5002A277C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752724192A49F2C5002A277C /* Assets.xcassets */; };
+		7527241D2A49F2C5002A277C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7527241B2A49F2C5002A277C /* LaunchScreen.storyboard */; };
+		752724282A49F2C5002A277C /* whats_on_tv_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724272A49F2C5002A277C /* whats_on_tv_iosTests.swift */; };
+		752724322A49F2C5002A277C /* whats_on_tv_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724312A49F2C5002A277C /* whats_on_tv_iosUITests.swift */; };
+		752724342A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724332A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		752724242A49F2C5002A277C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 752724052A49F2C4002A277C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7527240C2A49F2C4002A277C;
+			remoteInfo = "whats-on-tv-ios";
+		};
+		7527242E2A49F2C5002A277C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 752724052A49F2C4002A277C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7527240C2A49F2C4002A277C;
+			remoteInfo = "whats-on-tv-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7527240D2A49F2C4002A277C /* whats-on-tv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whats-on-tv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		752724102A49F2C4002A277C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		752724122A49F2C4002A277C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		752724142A49F2C4002A277C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		752724172A49F2C4002A277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		752724192A49F2C5002A277C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7527241C2A49F2C5002A277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7527241E2A49F2C5002A277C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		752724232A49F2C5002A277C /* whats-on-tv-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "whats-on-tv-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		752724272A49F2C5002A277C /* whats_on_tv_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whats_on_tv_iosTests.swift; sourceTree = "<group>"; };
+		7527242D2A49F2C5002A277C /* whats-on-tv-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "whats-on-tv-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		752724312A49F2C5002A277C /* whats_on_tv_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whats_on_tv_iosUITests.swift; sourceTree = "<group>"; };
+		752724332A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whats_on_tv_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7527240A2A49F2C4002A277C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		752724202A49F2C5002A277C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7527242A2A49F2C5002A277C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		752724042A49F2C4002A277C = {
+			isa = PBXGroup;
+			children = (
+				7527240F2A49F2C4002A277C /* whats-on-tv-ios */,
+				752724262A49F2C5002A277C /* whats-on-tv-iosTests */,
+				752724302A49F2C5002A277C /* whats-on-tv-iosUITests */,
+				7527240E2A49F2C4002A277C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7527240E2A49F2C4002A277C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7527240D2A49F2C4002A277C /* whats-on-tv-ios.app */,
+				752724232A49F2C5002A277C /* whats-on-tv-iosTests.xctest */,
+				7527242D2A49F2C5002A277C /* whats-on-tv-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7527240F2A49F2C4002A277C /* whats-on-tv-ios */ = {
+			isa = PBXGroup;
+			children = (
+				752724102A49F2C4002A277C /* AppDelegate.swift */,
+				752724122A49F2C4002A277C /* SceneDelegate.swift */,
+				752724142A49F2C4002A277C /* ViewController.swift */,
+				752724162A49F2C4002A277C /* Main.storyboard */,
+				752724192A49F2C5002A277C /* Assets.xcassets */,
+				7527241B2A49F2C5002A277C /* LaunchScreen.storyboard */,
+				7527241E2A49F2C5002A277C /* Info.plist */,
+			);
+			path = "whats-on-tv-ios";
+			sourceTree = "<group>";
+		};
+		752724262A49F2C5002A277C /* whats-on-tv-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				752724272A49F2C5002A277C /* whats_on_tv_iosTests.swift */,
+			);
+			path = "whats-on-tv-iosTests";
+			sourceTree = "<group>";
+		};
+		752724302A49F2C5002A277C /* whats-on-tv-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				752724312A49F2C5002A277C /* whats_on_tv_iosUITests.swift */,
+				752724332A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift */,
+			);
+			path = "whats-on-tv-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7527240C2A49F2C4002A277C /* whats-on-tv-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 752724372A49F2C5002A277C /* Build configuration list for PBXNativeTarget "whats-on-tv-ios" */;
+			buildPhases = (
+				752724092A49F2C4002A277C /* Sources */,
+				7527240A2A49F2C4002A277C /* Frameworks */,
+				7527240B2A49F2C4002A277C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "whats-on-tv-ios";
+			productName = "whats-on-tv-ios";
+			productReference = 7527240D2A49F2C4002A277C /* whats-on-tv-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		752724222A49F2C5002A277C /* whats-on-tv-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7527243A2A49F2C5002A277C /* Build configuration list for PBXNativeTarget "whats-on-tv-iosTests" */;
+			buildPhases = (
+				7527241F2A49F2C5002A277C /* Sources */,
+				752724202A49F2C5002A277C /* Frameworks */,
+				752724212A49F2C5002A277C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				752724252A49F2C5002A277C /* PBXTargetDependency */,
+			);
+			name = "whats-on-tv-iosTests";
+			productName = "whats-on-tv-iosTests";
+			productReference = 752724232A49F2C5002A277C /* whats-on-tv-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7527242C2A49F2C5002A277C /* whats-on-tv-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7527243D2A49F2C5002A277C /* Build configuration list for PBXNativeTarget "whats-on-tv-iosUITests" */;
+			buildPhases = (
+				752724292A49F2C5002A277C /* Sources */,
+				7527242A2A49F2C5002A277C /* Frameworks */,
+				7527242B2A49F2C5002A277C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7527242F2A49F2C5002A277C /* PBXTargetDependency */,
+			);
+			name = "whats-on-tv-iosUITests";
+			productName = "whats-on-tv-iosUITests";
+			productReference = 7527242D2A49F2C5002A277C /* whats-on-tv-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		752724052A49F2C4002A277C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7527240C2A49F2C4002A277C = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					752724222A49F2C5002A277C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 7527240C2A49F2C4002A277C;
+					};
+					7527242C2A49F2C5002A277C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 7527240C2A49F2C4002A277C;
+					};
+				};
+			};
+			buildConfigurationList = 752724082A49F2C4002A277C /* Build configuration list for PBXProject "whats-on-tv-ios" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 752724042A49F2C4002A277C;
+			productRefGroup = 7527240E2A49F2C4002A277C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7527240C2A49F2C4002A277C /* whats-on-tv-ios */,
+				752724222A49F2C5002A277C /* whats-on-tv-iosTests */,
+				7527242C2A49F2C5002A277C /* whats-on-tv-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7527240B2A49F2C4002A277C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7527241D2A49F2C5002A277C /* LaunchScreen.storyboard in Resources */,
+				7527241A2A49F2C5002A277C /* Assets.xcassets in Resources */,
+				752724182A49F2C4002A277C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		752724212A49F2C5002A277C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7527242B2A49F2C5002A277C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		752724092A49F2C4002A277C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				752724152A49F2C4002A277C /* ViewController.swift in Sources */,
+				752724112A49F2C4002A277C /* AppDelegate.swift in Sources */,
+				752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7527241F2A49F2C5002A277C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				752724282A49F2C5002A277C /* whats_on_tv_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		752724292A49F2C5002A277C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				752724322A49F2C5002A277C /* whats_on_tv_iosUITests.swift in Sources */,
+				752724342A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		752724252A49F2C5002A277C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7527240C2A49F2C4002A277C /* whats-on-tv-ios */;
+			targetProxy = 752724242A49F2C5002A277C /* PBXContainerItemProxy */;
+		};
+		7527242F2A49F2C5002A277C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7527240C2A49F2C4002A277C /* whats-on-tv-ios */;
+			targetProxy = 7527242E2A49F2C5002A277C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		752724162A49F2C4002A277C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				752724172A49F2C4002A277C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7527241B2A49F2C5002A277C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7527241C2A49F2C5002A277C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		752724352A49F2C5002A277C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		752724362A49F2C5002A277C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		752724382A49F2C5002A277C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KR33X63ZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "whats-on-tv-ios/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "duarte-bruno.whats-on-tv-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		752724392A49F2C5002A277C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KR33X63ZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "whats-on-tv-ios/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "duarte-bruno.whats-on-tv-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7527243B2A49F2C5002A277C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KR33X63ZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "duarte-bruno.whats-on-tv-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whats-on-tv-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/whats-on-tv-ios";
+			};
+			name = Debug;
+		};
+		7527243C2A49F2C5002A277C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KR33X63ZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "duarte-bruno.whats-on-tv-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whats-on-tv-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/whats-on-tv-ios";
+			};
+			name = Release;
+		};
+		7527243E2A49F2C5002A277C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KR33X63ZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "duarte-bruno.whats-on-tv-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "whats-on-tv-ios";
+			};
+			name = Debug;
+		};
+		7527243F2A49F2C5002A277C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KR33X63ZD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "duarte-bruno.whats-on-tv-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "whats-on-tv-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		752724082A49F2C4002A277C /* Build configuration list for PBXProject "whats-on-tv-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				752724352A49F2C5002A277C /* Debug */,
+				752724362A49F2C5002A277C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		752724372A49F2C5002A277C /* Build configuration list for PBXNativeTarget "whats-on-tv-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				752724382A49F2C5002A277C /* Debug */,
+				752724392A49F2C5002A277C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7527243A2A49F2C5002A277C /* Build configuration list for PBXNativeTarget "whats-on-tv-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7527243B2A49F2C5002A277C /* Debug */,
+				7527243C2A49F2C5002A277C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7527243D2A49F2C5002A277C /* Build configuration list for PBXNativeTarget "whats-on-tv-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7527243E2A49F2C5002A277C /* Debug */,
+				7527243F2A49F2C5002A277C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 752724052A49F2C4002A277C /* Project object */;
+}
