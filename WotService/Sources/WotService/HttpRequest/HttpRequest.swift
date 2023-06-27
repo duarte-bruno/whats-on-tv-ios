@@ -7,42 +7,64 @@
 
 import Foundation
 
-public struct HttpParams {
+public class HttpRequest: GetHttpRequestProtocol {
     
-    /// URL path after the base URL (this path should not start with "/")
-    let path: String
-    /// Query string params
-    let queryParams: [String: String]?
-}
-
-public protocol GetHttpRequest {
+    // MARK: - public methods
     
-    /// GET HTTP Request
-    /// - Parameters:
-    ///   - params: Request params
-    ///   - completion: Completion response
-    func get<T: Codable>(_ params: HttpParams, completion: @escaping (Result<T, HttpError>) -> Void)
-}
-
-public enum HttpError: Error, CustomStringConvertible {
-    case invalidPath
-    case transportError(Error?)
-    case serverSideError(Int)
-    case unexpected
-    case serialization
-    
-    public var description: String {
-        switch self {
-        case .invalidPath:
-            return "The requested path is not valid."
-        case .transportError(let error):
-            return "Some errors occurred while trying to request the server. Description: (\(error?.localizedDescription ?? ""))."
-        case .serverSideError(let code):
-            return "The request failed with the status code \(code)."
-        case .unexpected:
-            return "Some unexpected error ocurred."
-        case .serialization:
-            return "Cannot serialize response into requested object."
+    public func get<T: Codable>(_ params: HttpParams, completion: @escaping (Result<T, HttpError>) -> Void) {
+        guard let url = createUrl(params) else {
+            completion(.failure(.invalidPath))
+            return
         }
+        
+        let request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if let error = error {
+                completion(.failure(.transportError(error)))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                completion(.failure(.unexpected))
+                return
+            }
+
+            guard (200..<300) ~= response.statusCode else {
+                completion(.failure(.serverSideError(response.statusCode)))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.serialization))
+                return
+            }
+            
+            do {
+                let object = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(object))
+            } catch {
+                completion(.failure(.serialization))
+                return
+            }
+        }
+        task.resume()
+    }
+    
+    // MARK: - private methods
+    
+    /// Create an URL for HTTP request
+    /// - Parameter params: Request params
+    /// - Returns: The created URL
+    private func createUrl(_ params: HttpParams) -> URL? {
+        var queryParams = [URLQueryItem]()
+        
+        for queryParam in params.queryParams ?? [:] {
+            queryParams.append(URLQueryItem(name: queryParam.key, value: queryParam.value))
+        }
+
+        var urlComponents = URLComponents(string: WotService.shared.baseUrl + params.path)
+        urlComponents?.queryItems = queryParams
+        return urlComponents?.url
     }
 }
