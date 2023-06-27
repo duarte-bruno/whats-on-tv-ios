@@ -1,11 +1,26 @@
+//
+//  WotServiceTests.swift
+//
+//
+//  Created by Bruno Duarte on 27/06/23.
+//
+
 import XCTest
 @testable import WotService
 
 final class WotServiceTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(WotService().text, "Hello, World!")
+    
+    func test_configureBaseUrl_shouldChange() throws {
+        let baseUrl = "http://www.test.com/"
+        
+        WotService.shared.configure(baseUrl: baseUrl)
+        XCTAssertEqual(WotService.shared.baseUrl, baseUrl)
+    }
+    
+    func test_configureBundle_shouldChange() throws {
+        let bundle = Bundle.main
+        
+        WotService.shared.configure(bundle: bundle)
+        XCTAssertEqual(WotService.shared.bundle, bundle)
     }
 }
