@@ -9,16 +9,35 @@ import Foundation
 
 public class HttpRequest: GetHttpRequestProtocol {
     
+    // MARK: - private properties
+    
+    private let session: URLSession
+    
+    // MARK: - init
+    
+    public required init(urlProtocol: URLProtocol?) {
+        if let urlProtocol = urlProtocol {
+            URLProtocol.registerClass(urlProtocol.classForCoder)
+            
+            let configuration = URLSessionConfiguration.default
+            configuration.protocolClasses?.insert(urlProtocol.classForCoder, at: 0)
+            
+            session = URLSession(configuration: configuration)
+        } else {
+            session = URLSession()
+        }
+    }
+    
     // MARK: - public methods
     
     public func get<T: Codable>(_ params: HttpParams, completion: @escaping (Result<T, HttpError>) -> Void) {
-        guard let url = createUrl(params) else {
+        guard let url = params.createUrl() else {
             completion(.failure(.invalidPath))
             return
         }
-        
+
         let request = URLRequest(url: url)
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             
             if let error = error {
                 completion(.failure(.transportError(error)))
@@ -49,22 +68,5 @@ public class HttpRequest: GetHttpRequestProtocol {
             }
         }
         task.resume()
-    }
-    
-    // MARK: - private methods
-    
-    /// Create an URL for HTTP request
-    /// - Parameter params: Request params
-    /// - Returns: The created URL
-    private func createUrl(_ params: HttpParams) -> URL? {
-        var queryParams = [URLQueryItem]()
-        
-        for queryParam in params.queryParams ?? [:] {
-            queryParams.append(URLQueryItem(name: queryParam.key, value: queryParam.value))
-        }
-
-        var urlComponents = URLComponents(string: WotService.shared.baseUrl + params.path)
-        urlComponents?.queryItems = queryParams
-        return urlComponents?.url
     }
 }

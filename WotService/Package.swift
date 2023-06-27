@@ -23,6 +23,10 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "WotServiceTests",
-            dependencies: ["WotService"]),
+            dependencies: ["WotService"],
+            resources: [
+                .process("HttpRequest/JsonMocks")
+            ]
+        ),
     ]
 )

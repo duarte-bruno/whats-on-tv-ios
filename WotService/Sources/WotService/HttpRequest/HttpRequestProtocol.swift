@@ -7,7 +7,14 @@
 
 import Foundation
 
-public protocol GetHttpRequestProtocol {
+public protocol HttpRequestProtocol {
+    
+    /// Init with a specific subclass of URLProtocol protocol if needed
+    /// - Parameter urlProtocol: URLProtocol subclass
+    init(urlProtocol: URLProtocol?)
+}
+
+public protocol GetHttpRequestProtocol: HttpRequestProtocol {
     
     /// GET HTTP Request
     /// - Parameters:

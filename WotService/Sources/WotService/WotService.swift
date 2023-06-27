@@ -22,7 +22,7 @@ public struct WotService {
     
     /// Add some base configuration for WotService package
     /// - Parameters:
-    ///   - baseUrl: Base URL for all APIs
+    ///   - baseUrl: Base URL for all APIs (This URL should end with "/")
     ///   - bundle: Instance of Bundle
     public func configure(
         baseUrl: String = WotService.shared.baseUrl,
