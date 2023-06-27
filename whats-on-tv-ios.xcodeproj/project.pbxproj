@@ -16,6 +16,8 @@
 		752724282A49F2C5002A277C /* whats_on_tv_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724272A49F2C5002A277C /* whats_on_tv_iosTests.swift */; };
 		752724322A49F2C5002A277C /* whats_on_tv_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724312A49F2C5002A277C /* whats_on_tv_iosUITests.swift */; };
 		752724342A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724332A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift */; };
+		75EA10502A4A63F400DE79C2 /* WotService in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA104F2A4A63F400DE79C2 /* WotService */; };
+		75EA10522A4A63F400DE79C2 /* WotView in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA10512A4A63F400DE79C2 /* WotView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7527242D2A49F2C5002A277C /* whats-on-tv-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "whats-on-tv-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		752724312A49F2C5002A277C /* whats_on_tv_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whats_on_tv_iosUITests.swift; sourceTree = "<group>"; };
 		752724332A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whats_on_tv_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		75EA104C2A4A634900DE79C2 /* WotService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotService; sourceTree = "<group>"; };
+		75EA104D2A4A63AD00DE79C2 /* WotView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotView; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EA10522A4A63F400DE79C2 /* WotView in Frameworks */,
+				75EA10502A4A63F400DE79C2 /* WotService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +85,13 @@
 		752724042A49F2C4002A277C = {
 			isa = PBXGroup;
 			children = (
+				75EA104D2A4A63AD00DE79C2 /* WotView */,
+				75EA104C2A4A634900DE79C2 /* WotService */,
 				7527240F2A49F2C4002A277C /* whats-on-tv-ios */,
 				752724262A49F2C5002A277C /* whats-on-tv-iosTests */,
 				752724302A49F2C5002A277C /* whats-on-tv-iosUITests */,
 				7527240E2A49F2C4002A277C /* Products */,
+				75EA104E2A4A63F400DE79C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +136,13 @@
 			path = "whats-on-tv-iosUITests";
 			sourceTree = "<group>";
 		};
+		75EA104E2A4A63F400DE79C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +159,10 @@
 			dependencies = (
 			);
 			name = "whats-on-tv-ios";
+			packageProductDependencies = (
+				75EA104F2A4A63F400DE79C2 /* WotService */,
+				75EA10512A4A63F400DE79C2 /* WotView */,
+			);
 			productName = "whats-on-tv-ios";
 			productReference = 7527240D2A49F2C4002A277C /* whats-on-tv-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -612,6 +632,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75EA104F2A4A63F400DE79C2 /* WotService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WotService;
+		};
+		75EA10512A4A63F400DE79C2 /* WotView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WotView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 752724052A49F2C4002A277C /* Project object */;
 }
