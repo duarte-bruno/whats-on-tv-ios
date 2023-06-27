@@ -9,6 +9,8 @@ import Foundation
 
 public class UrlSessionRequest: GetHttpRequest {
     
+    // MARK: - public methods
+    
     public func get<T: Codable>(_ params: HttpParams, completion: @escaping (Result<T, HttpError>) -> Void) {
         guard let url = createUrl(params) else {
             completion(.failure(.invalidPath))
@@ -49,6 +51,11 @@ public class UrlSessionRequest: GetHttpRequest {
         task.resume()
     }
     
+    // MARK: - private methods
+    
+    /// Create an URL for HTTP request
+    /// - Parameter params: Request params
+    /// - Returns: The created URL
     private func createUrl(_ params: HttpParams) -> URL? {
         var queryParams = [URLQueryItem]()
         

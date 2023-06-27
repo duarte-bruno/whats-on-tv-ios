@@ -8,11 +8,19 @@
 import Foundation
 
 public struct HttpParams {
+    
+    /// URL path after the base URL (this path should not start with "/")
     let path: String
+    /// Query string params
     let queryParams: [String: String]?
 }
 
 public protocol GetHttpRequest {
+    
+    /// GET HTTP Request
+    /// - Parameters:
+    ///   - params: Request params
+    ///   - completion: Completion response
     func get<T: Codable>(_ params: HttpParams, completion: @escaping (Result<T, HttpError>) -> Void)
 }
 

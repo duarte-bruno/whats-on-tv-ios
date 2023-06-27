@@ -4,7 +4,7 @@ public struct WotService {
     
     // MARK: - public properties
     
-    /// Base URL for all APIs
+    /// Base URL for all APIs (This URL should end with "/")
     public private(set) var baseUrl: String
     /// Instance of Bundle
     public private(set) var bundle: Bundle
