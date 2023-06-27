@@ -18,6 +18,7 @@
 		752724342A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724332A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift */; };
 		75EA10502A4A63F400DE79C2 /* WotService in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA104F2A4A63F400DE79C2 /* WotService */; };
 		75EA10522A4A63F400DE79C2 /* WotView in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA10512A4A63F400DE79C2 /* WotView */; };
+		75EA10552A4A697100DE79C2 /* WotCore in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA10542A4A697100DE79C2 /* WotCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		752724332A49F2C5002A277C /* whats_on_tv_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whats_on_tv_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		75EA104C2A4A634900DE79C2 /* WotService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotService; sourceTree = "<group>"; };
 		75EA104D2A4A63AD00DE79C2 /* WotView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotView; sourceTree = "<group>"; };
+		75EA10532A4A695500DE79C2 /* WotCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EA10552A4A697100DE79C2 /* WotCore in Frameworks */,
 				75EA10522A4A63F400DE79C2 /* WotView in Frameworks */,
 				75EA10502A4A63F400DE79C2 /* WotService in Frameworks */,
 			);
@@ -85,6 +88,7 @@
 		752724042A49F2C4002A277C = {
 			isa = PBXGroup;
 			children = (
+				75EA10532A4A695500DE79C2 /* WotCore */,
 				75EA104D2A4A63AD00DE79C2 /* WotView */,
 				75EA104C2A4A634900DE79C2 /* WotService */,
 				7527240F2A49F2C4002A277C /* whats-on-tv-ios */,
@@ -162,6 +166,7 @@
 			packageProductDependencies = (
 				75EA104F2A4A63F400DE79C2 /* WotService */,
 				75EA10512A4A63F400DE79C2 /* WotView */,
+				75EA10542A4A697100DE79C2 /* WotCore */,
 			);
 			productName = "whats-on-tv-ios";
 			productReference = 7527240D2A49F2C4002A277C /* whats-on-tv-ios.app */;
@@ -641,6 +646,10 @@
 		75EA10512A4A63F400DE79C2 /* WotView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WotView;
+		};
+		75EA10542A4A697100DE79C2 /* WotCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WotCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
