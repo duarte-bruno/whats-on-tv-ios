@@ -112,13 +112,9 @@
 		7527240F2A49F2C4002A277C /* whats-on-tv-ios */ = {
 			isa = PBXGroup;
 			children = (
-				752724102A49F2C4002A277C /* AppDelegate.swift */,
-				752724122A49F2C4002A277C /* SceneDelegate.swift */,
+				75EA10562A4B92D500DE79C2 /* SupportFiles */,
 				752724142A49F2C4002A277C /* ViewController.swift */,
 				752724162A49F2C4002A277C /* Main.storyboard */,
-				752724192A49F2C5002A277C /* Assets.xcassets */,
-				7527241B2A49F2C5002A277C /* LaunchScreen.storyboard */,
-				7527241E2A49F2C5002A277C /* Info.plist */,
 			);
 			path = "whats-on-tv-ios";
 			sourceTree = "<group>";
@@ -145,6 +141,18 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75EA10562A4B92D500DE79C2 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				752724122A49F2C4002A277C /* SceneDelegate.swift */,
+				752724102A49F2C4002A277C /* AppDelegate.swift */,
+				752724192A49F2C5002A277C /* Assets.xcassets */,
+				7527241B2A49F2C5002A277C /* LaunchScreen.storyboard */,
+				7527241E2A49F2C5002A277C /* Info.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,7 +472,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8KR33X63ZD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "whats-on-tv-ios/Info.plist";
+				INFOPLIST_FILE = "whats-on-tv-ios/SupportFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Whats on TV";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -497,7 +505,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8KR33X63ZD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "whats-on-tv-ios/Info.plist";
+				INFOPLIST_FILE = "whats-on-tv-ios/SupportFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Whats on TV";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
