@@ -27,7 +27,7 @@ public class WotTabBarViewController: UITabBarController, WotTabBarViewControlle
     }
     
     required init?(coder: NSCoder) {
-        fatalError("Error")
+        fatalError("init(coder:) has not been implemented.")
     }
     
     // MARK: - Private methods
