@@ -168,7 +168,7 @@
 		75EA10582A4BA08100DE79C2 /* PopularContentList */ = {
 			isa = PBXGroup;
 			children = (
-				75EA105E2A4BBBF800DE79C2 /* Services */,
+				75EA105E2A4BBBF800DE79C2 /* Service */,
 				75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */,
 			);
 			path = PopularContentList;
@@ -182,12 +182,12 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		75EA105E2A4BBBF800DE79C2 /* Services */ = {
+		75EA105E2A4BBBF800DE79C2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				75EA105F2A4BBC1B00DE79C2 /* PopularContentListService.swift */,
 			);
-			path = Services;
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
