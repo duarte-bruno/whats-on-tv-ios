@@ -19,6 +19,7 @@
 		75EA10552A4A697100DE79C2 /* WotCore in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA10542A4A697100DE79C2 /* WotCore */; };
 		75EA105B2A4BA0D200DE79C2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105A2A4BA0D200DE79C2 /* MainCoordinator.swift */; };
 		75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */; };
+		75EA10602A4BBC1B00DE79C2 /* PopularContentListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105F2A4BBC1B00DE79C2 /* PopularContentListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		75EA10532A4A695500DE79C2 /* WotCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotCore; sourceTree = "<group>"; };
 		75EA105A2A4BA0D200DE79C2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListCoordinator.swift; sourceTree = "<group>"; };
+		75EA105F2A4BBC1B00DE79C2 /* PopularContentListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		75EA10582A4BA08100DE79C2 /* PopularContentList */ = {
 			isa = PBXGroup;
 			children = (
+				75EA105E2A4BBBF800DE79C2 /* Services */,
 				75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */,
 			);
 			path = PopularContentList;
@@ -177,6 +180,14 @@
 				75EA105A2A4BA0D200DE79C2 /* MainCoordinator.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		75EA105E2A4BBBF800DE79C2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				75EA105F2A4BBC1B00DE79C2 /* PopularContentListService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 				75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */,
 				75EA105B2A4BA0D200DE79C2 /* MainCoordinator.swift in Sources */,
 				752724112A49F2C4002A277C /* AppDelegate.swift in Sources */,
+				75EA10602A4BBC1B00DE79C2 /* PopularContentListService.swift in Sources */,
 				752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
