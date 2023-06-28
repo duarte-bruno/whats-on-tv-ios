@@ -23,6 +23,10 @@ class PopularContentListCoordinator: WotCoordinator {
         return "Popular"
     }
     
+    private enum Screen {
+        case popularContentList
+    }
+    
     // MARK: - Init
     
     init() {
@@ -43,16 +47,21 @@ class PopularContentListCoordinator: WotCoordinator {
     }
     
     private func setupNavigation() {
-        let controller = UIViewController()
-        controller.view.backgroundColor = .white
-        controller.title = title
-        
-        navigationController.viewControllers = [controller]
+        navigationController.viewControllers = [getScreen(.popularContentList)]
         navigationController.navigationBar.prefersLargeTitles = true
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationController.navigationBar.titleTextAttributes = textAttributes
         navigationController.navigationBar.largeTitleTextAttributes = textAttributes
         navigationController.navigationBar.barStyle = .default
         navigationController.navigationBar.tintColor = .black
+    }
+    
+    private func getScreen(_ screen: Screen) -> UIViewController {
+        switch screen {
+        case .popularContentList:
+            let viewModel = PopularContentListViewModel()
+            let controller = PopularContentListViewController(viewModel: viewModel)
+            return controller
+        }
     }
 }

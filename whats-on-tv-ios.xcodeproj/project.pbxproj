@@ -21,6 +21,8 @@
 		75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */; };
 		75EA10602A4BBC1B00DE79C2 /* PopularContentListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105F2A4BBC1B00DE79C2 /* PopularContentListService.swift */; };
 		75EA10652A4C56F700DE79C2 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10642A4C56F700DE79C2 /* Content.swift */; };
+		75EA10672A4C5A7800DE79C2 /* PopularContentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10662A4C5A7800DE79C2 /* PopularContentListViewModel.swift */; };
+		75EA10692A4C5B8600DE79C2 /* PopularContentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10682A4C5B8600DE79C2 /* PopularContentListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListCoordinator.swift; sourceTree = "<group>"; };
 		75EA105F2A4BBC1B00DE79C2 /* PopularContentListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListService.swift; sourceTree = "<group>"; };
 		75EA10642A4C56F700DE79C2 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		75EA10662A4C5A7800DE79C2 /* PopularContentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListViewModel.swift; sourceTree = "<group>"; };
+		75EA10682A4C5B8600DE79C2 /* PopularContentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,7 @@
 		75EA10622A4C558F00DE79C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				75EA10682A4C5B8600DE79C2 /* PopularContentListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 		75EA10632A4C559900DE79C2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				75EA10662A4C5A7800DE79C2 /* PopularContentListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -353,6 +359,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */,
+				75EA10672A4C5A7800DE79C2 /* PopularContentListViewModel.swift in Sources */,
+				75EA10692A4C5B8600DE79C2 /* PopularContentListViewController.swift in Sources */,
 				75EA105B2A4BA0D200DE79C2 /* MainCoordinator.swift in Sources */,
 				752724112A49F2C4002A277C /* AppDelegate.swift in Sources */,
 				75EA10602A4BBC1B00DE79C2 /* PopularContentListService.swift in Sources */,
