@@ -27,7 +27,7 @@ public class WotTabBarViewController: UITabBarController, WotTabBarViewControlle
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented.")
+        fatalError(StrError.InitCoderNotImplemented.l)
     }
     
     // MARK: - Private methods
@@ -37,8 +37,27 @@ public class WotTabBarViewController: UITabBarController, WotTabBarViewControlle
         self.selectedViewController = getSelectedController()
         self.selectedIndex = initialSelectedIndex
         self.tabBar.barStyle = .default
-        self.tabBar.tintColor = .orange
-        self.tabBar.unselectedItemTintColor = .black
+        self.tabBar.tintColor = WotTheme.shared.color.primary.tint
+        self.tabBar.unselectedItemTintColor = WotTheme.shared.color.secondary.tint
+        self.tabBar.isTranslucent = false
+        self.tabBar.barTintColor = WotTheme.shared.color.tertiary.tint
+        self.tabBar.itemPositioning = .centered
+        addTopMargin()
+    }
+    
+    private func addTopMargin() {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = self.tabBar.barTintColor
+        
+        self.tabBar.addSubview(view)
+        
+        NSLayoutConstraint.activate([
+            view.leftAnchor.constraint(equalTo: self.tabBar.leftAnchor),
+            view.rightAnchor.constraint(equalTo: self.tabBar.rightAnchor),
+            view.bottomAnchor.constraint(equalTo: self.tabBar.topAnchor),
+            view.heightAnchor.constraint(equalToConstant: 5)
+        ])
     }
     
     private func createControlerList() -> [UIViewController] {
