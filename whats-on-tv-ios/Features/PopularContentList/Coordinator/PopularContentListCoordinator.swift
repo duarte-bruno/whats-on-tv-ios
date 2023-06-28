@@ -7,10 +7,13 @@
 
 import UIKit
 import WotCore
+import WotService
 
 class PopularContentListCoordinator: WotCoordinator {
     
     // MARK: - Public properties
+    
+    let httpRequest: HttpRequest
     
     var initialController: UIViewController {
         return navigationController
@@ -31,6 +34,7 @@ class PopularContentListCoordinator: WotCoordinator {
     
     init() {
         self.navigationController = UINavigationController()
+        self.httpRequest = HttpRequest()
         
         setupTabBarItem()
         setupNavigation()
@@ -59,7 +63,7 @@ class PopularContentListCoordinator: WotCoordinator {
     private func getScreen(_ screen: Screen) -> UIViewController {
         switch screen {
         case .popularContentList:
-            let viewModel = PopularContentListViewModel()
+            let viewModel = PopularContentListViewModel(delegate: self)
             let controller = PopularContentListViewController(viewModel: viewModel)
             return controller
         }

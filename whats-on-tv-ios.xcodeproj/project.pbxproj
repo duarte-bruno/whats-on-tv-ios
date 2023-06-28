@@ -26,6 +26,7 @@
 		75EA106E2A4C683A00DE79C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75EA106C2A4C683A00DE79C2 /* Localizable.strings */; };
 		75EA10742A4C692100DE79C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75EA10722A4C692100DE79C2 /* Localizable.strings */; };
 		75EA10772A4C728100DE79C2 /* StrPopularContentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10762A4C728100DE79C2 /* StrPopularContentList.swift */; };
+		75EA107A2A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10792A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		75EA106D2A4C683A00DE79C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 		75EA10732A4C692100DE79C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		75EA10762A4C728100DE79C2 /* StrPopularContentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrPopularContentList.swift; sourceTree = "<group>"; };
+		75EA10792A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularContentListCoordinator+PopularContentListDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,12 +183,12 @@
 		75EA10582A4BA08100DE79C2 /* PopularContentList */ = {
 			isa = PBXGroup;
 			children = (
+				75EA10782A4C7A9600DE79C2 /* Coordinator */,
 				75EA10752A4C725500DE79C2 /* Localization */,
 				75EA10632A4C559900DE79C2 /* ViewModel */,
 				75EA10622A4C558F00DE79C2 /* View */,
 				75EA10612A4C558700DE79C2 /* Model */,
 				75EA105E2A4BBBF800DE79C2 /* Service */,
-				75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */,
 			);
 			path = PopularContentList;
 			sourceTree = "<group>";
@@ -262,6 +264,15 @@
 				75EA10762A4C728100DE79C2 /* StrPopularContentList.swift */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		75EA10782A4C7A9600DE79C2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */,
+				75EA10792A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +415,7 @@
 				75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */,
 				75EA10672A4C5A7800DE79C2 /* PopularContentListViewModel.swift in Sources */,
 				75EA10692A4C5B8600DE79C2 /* PopularContentListViewController.swift in Sources */,
+				75EA107A2A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift in Sources */,
 				75EA10772A4C728100DE79C2 /* StrPopularContentList.swift in Sources */,
 				75EA105B2A4BA0D200DE79C2 /* MainCoordinator.swift in Sources */,
 				752724112A49F2C4002A277C /* AppDelegate.swift in Sources */,

@@ -7,12 +7,27 @@
 
 import Foundation
 
+protocol PopularContentListDelegate: AnyObject {
+    
+    /// Called when it's view did load and the content list should be updated.
+    func getContentList()
+}
+
 protocol PopularContentListViewModelProtocol {
     
     var title: String { get }
+    
+    init(delegate: PopularContentListDelegate?)
+    
+    /// Called when it's view did load and the content list should be updated.
+    func getContentList()
 }
 
 class PopularContentListViewModel: PopularContentListViewModelProtocol {
+    
+    // MARK: - Private properties
+    
+    private weak var delegate: PopularContentListDelegate?
     
     // MARK: - Public properties
     
@@ -20,7 +35,14 @@ class PopularContentListViewModel: PopularContentListViewModelProtocol {
     
     // MARK: - Init
     
-    init() {
+    required init(delegate: PopularContentListDelegate? = nil) {
+        self.delegate = delegate
         self.title = StrPopularContentList.Title.l
+    }
+    
+    // MARK: - Public methods
+    
+    func getContentList() {
+        delegate?.getContentList()
     }
 }

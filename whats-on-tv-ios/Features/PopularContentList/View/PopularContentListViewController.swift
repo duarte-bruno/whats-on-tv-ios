@@ -31,7 +31,9 @@ class PopularContentListViewController: UIViewController {
         title = viewModel.title
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        viewModel.getContentList()
     }
 }

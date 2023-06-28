@@ -15,7 +15,7 @@ public class HttpRequest: GetHttpRequestProtocol {
     
     // MARK: - init
     
-    public required init(urlProtocol: URLProtocol?) {
+    public required init(urlProtocol: URLProtocol? = nil) {
         if let urlProtocol = urlProtocol {
             URLProtocol.registerClass(urlProtocol.classForCoder)
             
@@ -24,7 +24,7 @@ public class HttpRequest: GetHttpRequestProtocol {
             
             session = URLSession(configuration: configuration)
         } else {
-            session = URLSession()
+            session = URLSession.shared
         }
     }
     
