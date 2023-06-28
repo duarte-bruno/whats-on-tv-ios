@@ -16,6 +16,13 @@ public struct HttpParams {
     /// Query string params
     public let queryParams: [String: String]?
     
+    // MARK: - init
+    
+    public init(path: String, queryParams: [String : String]? = nil) {
+        self.path = path
+        self.queryParams = queryParams
+    }
+    
     // MARK: - public methods
     
     /// Create an URL for this params
