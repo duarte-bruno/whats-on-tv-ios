@@ -8,7 +8,7 @@
 import UIKit
 import WotCore
 
-protocol WotTabBarViewControllerProtocol: UITabBarController {
+public protocol WotTabBarViewControllerProtocol: UITabBarController {
     
     /// Initialize the TabViewController with a list of coordinators
     /// - Parameters:

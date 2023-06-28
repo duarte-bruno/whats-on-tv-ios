@@ -10,12 +10,14 @@ import WotCore
 
 public class WotTabBarViewController: UITabBarController, WotTabBarViewControllerProtocol {
     
+    // MARK: - Private properties
+    
     private let coordinators: [WotCoordinator]
     private var initialSelectedIndex: Int
     
-    // MARK: - Initialization
+    // MARK: - Init
     
-    required init(coordinators: [WotCoordinator], initialSelectedIndex: Int = 0) {
+    public required init(coordinators: [WotCoordinator], initialSelectedIndex: Int = 0) {
         self.coordinators = coordinators
         self.initialSelectedIndex = initialSelectedIndex
         

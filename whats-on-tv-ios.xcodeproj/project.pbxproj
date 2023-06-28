@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		752724112A49F2C4002A277C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724102A49F2C4002A277C /* AppDelegate.swift */; };
 		752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724122A49F2C4002A277C /* SceneDelegate.swift */; };
-		752724152A49F2C4002A277C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724142A49F2C4002A277C /* ViewController.swift */; };
-		752724182A49F2C4002A277C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752724162A49F2C4002A277C /* Main.storyboard */; };
 		7527241A2A49F2C5002A277C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752724192A49F2C5002A277C /* Assets.xcassets */; };
 		7527241D2A49F2C5002A277C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7527241B2A49F2C5002A277C /* LaunchScreen.storyboard */; };
 		752724282A49F2C5002A277C /* whats_on_tv_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752724272A49F2C5002A277C /* whats_on_tv_iosTests.swift */; };
@@ -19,6 +17,8 @@
 		75EA10502A4A63F400DE79C2 /* WotService in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA104F2A4A63F400DE79C2 /* WotService */; };
 		75EA10522A4A63F400DE79C2 /* WotView in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA10512A4A63F400DE79C2 /* WotView */; };
 		75EA10552A4A697100DE79C2 /* WotCore in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA10542A4A697100DE79C2 /* WotCore */; };
+		75EA105B2A4BA0D200DE79C2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105A2A4BA0D200DE79C2 /* MainCoordinator.swift */; };
+		75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 		7527240D2A49F2C4002A277C /* whats-on-tv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whats-on-tv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		752724102A49F2C4002A277C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		752724122A49F2C4002A277C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		752724142A49F2C4002A277C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		752724172A49F2C4002A277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		752724192A49F2C5002A277C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7527241C2A49F2C5002A277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7527241E2A49F2C5002A277C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +53,8 @@
 		75EA104C2A4A634900DE79C2 /* WotService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotService; sourceTree = "<group>"; };
 		75EA104D2A4A63AD00DE79C2 /* WotView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotView; sourceTree = "<group>"; };
 		75EA10532A4A695500DE79C2 /* WotCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotCore; sourceTree = "<group>"; };
+		75EA105A2A4BA0D200DE79C2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +112,8 @@
 		7527240F2A49F2C4002A277C /* whats-on-tv-ios */ = {
 			isa = PBXGroup;
 			children = (
+				75EA10572A4BA05400DE79C2 /* Features */,
 				75EA10562A4B92D500DE79C2 /* SupportFiles */,
-				752724142A49F2C4002A277C /* ViewController.swift */,
-				752724162A49F2C4002A277C /* Main.storyboard */,
 			);
 			path = "whats-on-tv-ios";
 			sourceTree = "<group>";
@@ -153,6 +152,31 @@
 				7527241E2A49F2C5002A277C /* Info.plist */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		75EA10572A4BA05400DE79C2 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				75EA10592A4BA0AC00DE79C2 /* Main */,
+				75EA10582A4BA08100DE79C2 /* PopularContentList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		75EA10582A4BA08100DE79C2 /* PopularContentList */ = {
+			isa = PBXGroup;
+			children = (
+				75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */,
+			);
+			path = PopularContentList;
+			sourceTree = "<group>";
+		};
+		75EA10592A4BA0AC00DE79C2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				75EA105A2A4BA0D200DE79C2 /* MainCoordinator.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +290,6 @@
 			files = (
 				7527241D2A49F2C5002A277C /* LaunchScreen.storyboard in Resources */,
 				7527241A2A49F2C5002A277C /* Assets.xcassets in Resources */,
-				752724182A49F2C4002A277C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				752724152A49F2C4002A277C /* ViewController.swift in Sources */,
+				75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */,
+				75EA105B2A4BA0D200DE79C2 /* MainCoordinator.swift in Sources */,
 				752724112A49F2C4002A277C /* AppDelegate.swift in Sources */,
 				752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */,
 			);
@@ -330,14 +354,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		752724162A49F2C4002A277C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				752724172A49F2C4002A277C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7527241B2A49F2C5002A277C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -477,7 +493,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -510,7 +526,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
