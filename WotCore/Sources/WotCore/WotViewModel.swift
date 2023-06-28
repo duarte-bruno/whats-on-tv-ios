@@ -31,5 +31,6 @@ public protocol WotViewModelReaction: AnyObject {
 public enum ViewState {
     case startLoading
     case stopLoading
+    case updateContent
     case showAlert(title: String, message: String)
 }

@@ -40,7 +40,11 @@ class PopularContentListViewModel: PopularContentListViewModelProtocol {
     // MARK: - Public properties
     
     let title: String
-    private(set) var contentList: [Content]
+    private(set) var contentList: [Content] {
+        didSet {
+            self.reaction?.updateViewState(.updateContent)
+        }
+    }
     var reaction: WotViewModelReaction?
     
     // MARK: - Init
