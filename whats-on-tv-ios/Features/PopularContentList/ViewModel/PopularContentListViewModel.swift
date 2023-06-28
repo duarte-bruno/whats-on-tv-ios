@@ -7,6 +7,7 @@
 
 import Foundation
 import WotView
+import WotCore
 
 protocol PopularContentListDelegate: AnyObject {
     
