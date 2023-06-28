@@ -6,17 +6,18 @@
 //
 
 import Foundation
+import WotCore
 
 extension PopularContentListCoordinator: PopularContentListDelegate {
     
-    func getContentList() {
+    func getContentList(sender: PopularContentListViewModelProtocol) {
         let service = PopularContentListService(httpRequest)
         service.getPopularContent { result in
             switch result {
             case .success(let contentList):
-                print(contentList.count)
+                sender.updateContentList(contentList)
             case .failure(let error):
-                print(error.description)
+                sender.updateViewState(.showAlert(title: StrGeneric.Ops.l, message: error.description))
             }
         }
     }

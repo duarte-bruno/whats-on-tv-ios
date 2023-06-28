@@ -6,6 +6,11 @@
   
 */
 
+// MARK: - StrGeneric
+
+"StrGeneric.Ok" = "Ok";
+"StrGeneric.Ops" = "Ops";
+
 // MARK: - StrError
 
 "StrError.InitCoderNotImplemented" = "init(coder:) has not been implemented.";

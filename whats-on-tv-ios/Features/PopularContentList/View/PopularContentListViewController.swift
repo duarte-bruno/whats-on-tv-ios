@@ -7,8 +7,9 @@
 
 import UIKit
 import WotCore
+import WotView
 
-class PopularContentListViewController: UIViewController {
+class PopularContentListViewController: WotViewController {
 
     // MARK: - Private properties
     
@@ -31,9 +32,33 @@ class PopularContentListViewController: UIViewController {
         title = viewModel.title
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setup()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         viewModel.getContentList()
+    }
+    
+    // MARK: - Private methods
+    
+    private func setup() {
+        viewModel.reaction = self
+    }
+}
+
+extension PopularContentListViewController: WotViewModelReaction {
+    
+    func updateViewState(_ viewState: ViewState) {
+        switch viewState {
+        case .showAlert(title: let title, message: let message):
+            super.showAlert(title: title, message: message)
+        default:
+            return
+        }
     }
 }
