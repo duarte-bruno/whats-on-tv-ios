@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  whats-on-tv-ios
+
+  Created by Bruno Duarte on 28/06/23.
+  
+*/
+
+// MARK: - StrError
+
+"StrError.InitCoderNotImplemented" = "init(coder:) has not been implemented.";
+
+// MARK: - StrPopularContentList
+
+"StrPopularContentList.Title" = "Popular";

@@ -21,6 +21,6 @@ class PopularContentListViewModel: PopularContentListViewModelProtocol {
     // MARK: - Init
     
     init() {
-        self.title = "Pupular"
+        self.title = StrPopularContentList.Title.l
     }
 }

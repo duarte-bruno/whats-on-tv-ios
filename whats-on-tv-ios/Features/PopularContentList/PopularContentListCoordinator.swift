@@ -20,7 +20,7 @@ class PopularContentListCoordinator: WotCoordinator {
     
     private let navigationController: UINavigationController
     private var title: String {
-        return "Popular"
+        return StrPopularContentList.Title.l
     }
     
     private enum Screen {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WotCore
 
 class PopularContentListViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class PopularContentListViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("Error")
+        fatalError(StrError.InitCoderNotImplemented.l)
     }
     
     override func loadView() {
