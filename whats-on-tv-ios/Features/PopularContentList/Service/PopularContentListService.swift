@@ -23,7 +23,7 @@ class PopularContentListService: PopularContentListServiceProtocol {
     }
     
     func getPopularContent(completion: @escaping (Result<[Content], HttpError>) -> Void) {
-        let params = HttpParams(path: "shows")
+        let params = HttpParams(path: "shows", queryParams: ["page": "0"])
         request.get(params, completion: completion)
     }
 }
