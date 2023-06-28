@@ -65,7 +65,7 @@ class PopularContentListViewModel: PopularContentListViewModelProtocol {
         self.contentList = contentList
     }
     
-    func updateViewState(_ viewState: ViewState) {
+    func updateViewState(_ viewState: WotViewState) {
         self.reaction?.updateViewState(viewState)
     }
 }

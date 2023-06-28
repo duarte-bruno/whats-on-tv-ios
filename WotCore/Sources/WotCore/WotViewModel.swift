@@ -17,18 +17,18 @@ public protocol WotViewModelProtocol {
     
     /// Change ViewModel's View state
     /// - Parameter viewState: Current state
-    func updateViewState(_ viewState: ViewState)
+    func updateViewState(_ viewState: WotViewState)
 }
 
 /// ViewModel reaction delegate
 public protocol WotViewModelReaction: AnyObject {
     /// Change ViewModel's View state
     /// - Parameter viewState: Current state
-    func updateViewState(_ viewState: ViewState)
+    func updateViewState(_ viewState: WotViewState)
 }
 
 /// Posible states for ViewModel
-public enum ViewState {
+public enum WotViewState {
     case startLoading
     case stopLoading
     case updateContent

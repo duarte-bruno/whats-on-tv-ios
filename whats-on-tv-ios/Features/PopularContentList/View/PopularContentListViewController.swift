@@ -53,7 +53,7 @@ class PopularContentListViewController: WotViewController {
 
 extension PopularContentListViewController: WotViewModelReaction {
     
-    func updateViewState(_ viewState: ViewState) {
+    func updateViewState(_ viewState: WotViewState) {
         switch viewState {
         case .showAlert(title: let title, message: let message):
             super.showAlert(title: title, message: message)
