@@ -27,6 +27,8 @@
 		75EA10742A4C692100DE79C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75EA10722A4C692100DE79C2 /* Localizable.strings */; };
 		75EA10772A4C728100DE79C2 /* StrPopularContentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10762A4C728100DE79C2 /* StrPopularContentList.swift */; };
 		75EA107A2A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10792A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift */; };
+		75EA10832A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10812A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift */; };
+		75EA10842A4CBBC400DE79C2 /* WotContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10822A4CBBC400DE79C2 /* WotContentListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		75EA10732A4C692100DE79C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		75EA10762A4C728100DE79C2 /* StrPopularContentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrPopularContentList.swift; sourceTree = "<group>"; };
 		75EA10792A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularContentListCoordinator+PopularContentListDelegate.swift"; sourceTree = "<group>"; };
+		75EA10812A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WotContentListCollectionViewCell.swift; sourceTree = "<group>"; };
+		75EA10822A4CBBC400DE79C2 /* WotContentListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WotContentListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 		7527240F2A49F2C4002A277C /* whats-on-tv-ios */ = {
 			isa = PBXGroup;
 			children = (
+				75EA107F2A4CBB9A00DE79C2 /* Components */,
 				75EA10572A4BA05400DE79C2 /* Features */,
 				75EA10562A4B92D500DE79C2 /* SupportFiles */,
 			);
@@ -275,6 +280,23 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		75EA107F2A4CBB9A00DE79C2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				75EA10802A4CBBB600DE79C2 /* WotContentListView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		75EA10802A4CBBB600DE79C2 /* WotContentListView */ = {
+			isa = PBXGroup;
+			children = (
+				75EA10812A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift */,
+				75EA10822A4CBBC400DE79C2 /* WotContentListView.swift */,
+			);
+			path = WotContentListView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,8 +438,10 @@
 				75EA10672A4C5A7800DE79C2 /* PopularContentListViewModel.swift in Sources */,
 				75EA10692A4C5B8600DE79C2 /* PopularContentListViewController.swift in Sources */,
 				75EA107A2A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift in Sources */,
+				75EA10832A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift in Sources */,
 				75EA10772A4C728100DE79C2 /* StrPopularContentList.swift in Sources */,
 				75EA105B2A4BA0D200DE79C2 /* MainCoordinator.swift in Sources */,
+				75EA10842A4CBBC400DE79C2 /* WotContentListView.swift in Sources */,
 				752724112A49F2C4002A277C /* AppDelegate.swift in Sources */,
 				75EA10602A4BBC1B00DE79C2 /* PopularContentListService.swift in Sources */,
 				752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */,
