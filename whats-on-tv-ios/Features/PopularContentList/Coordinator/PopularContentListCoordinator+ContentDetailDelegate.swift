@@ -21,4 +21,8 @@ extension PopularContentListCoordinator: ContentDetailDelegate {
             }
         }
     }
+    
+    func seeEpisodesList(contentDetail: ContentDetail) {
+        // TODO: Show episodes
+    }
 }

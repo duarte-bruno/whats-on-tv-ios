@@ -15,6 +15,10 @@ protocol ContentDetailDelegate: AnyObject {
     /// - Parameter sender: ViewModel which made this callback
     /// - Parameter pageIndex: Current page index
     func getContentDetail(id: Int, sender: ContentDetailViewModelProtocol)
+    
+    /// Called to display episodes list
+    /// - Parameter contentDetail: Detail with episodes list
+    func seeEpisodesList(contentDetail: ContentDetail)
 }
 
 protocol ContentDetailViewModelProtocol: WotViewModelProtocol {
@@ -30,6 +34,9 @@ protocol ContentDetailViewModelProtocol: WotViewModelProtocol {
     
     /// Called when it's view did load and the content detail should be presented.
     func getContentDetail()
+    
+    /// Called to display episodes list
+    func seeEpisodesList()
 }
 
 class ContentDetailViewModel: ContentDetailViewModelProtocol {
@@ -86,5 +93,11 @@ class ContentDetailViewModel: ContentDetailViewModelProtocol {
     
     func getContentDetail() {
         self.delegate?.getContentDetail(id: contentId, sender: self)
+    }
+    
+    func seeEpisodesList() {
+        if let contentDetail {
+            self.delegate?.seeEpisodesList(contentDetail: contentDetail)
+        }
     }
 }

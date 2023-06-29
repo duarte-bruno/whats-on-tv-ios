@@ -17,6 +17,7 @@ extension ContentDetailViewController {
         setupContentView()
         setupCover()
         setupLabels()
+        setupEpisodesButton()
         setupEmptySpace()
     }
     
@@ -81,7 +82,34 @@ extension ContentDetailViewController {
             let label = WotLabel(text: summary.htmlSanitized())
             label.padding(0, 0, 16, 16)
             contentView.contentStackView.addArrangedSubview(label)
+            contentView.contentStackView.setCustomSpacing(25, after: label)
         }
+    }
+    
+    private func setupEpisodesButton() {
+        guard let seasons = viewModel.contentDetail?.seasons, !seasons.isEmpty else { return }
+        
+        let button = WotButton(.primary)
+        button.setTitle(StrContentDetail.SeeEpisodesList.l, for: .normal)
+        button.addTarget(self, action: #selector(seeEpisodesList), for: .touchUpInside)
+        
+        let container = UIView()
+        container.backgroundColor = .clear
+        container.translatesAutoresizingMaskIntoConstraints = false
+        container.addSubview(button)
+        
+        NSLayoutConstraint.activate([
+            button.leftAnchor.constraint(equalTo: container.leftAnchor, constant: 16),
+            button.rightAnchor.constraint(equalTo: container.rightAnchor, constant: -16),
+            button.topAnchor.constraint(equalTo: container.topAnchor),
+            button.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+        ])
+        
+        contentView.contentStackView.addArrangedSubview(container)
+    }
+    
+    @objc private func seeEpisodesList() {
+        viewModel.seeEpisodesList()
     }
     
     private func setupEmptySpace() {

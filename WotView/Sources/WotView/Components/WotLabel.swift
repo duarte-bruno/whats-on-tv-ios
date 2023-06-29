@@ -52,9 +52,7 @@ public class WotLabel: UILabel {
             return contentSize
         }
     }
-    
-    
-    
+
     // MARK: - Public methods
     
     public func padding(_ top: CGFloat, _ bottom: CGFloat, _ left: CGFloat, _ right: CGFloat) {
