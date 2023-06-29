@@ -49,6 +49,7 @@ class WotContentListView: UIView {
     
     private func setupView() {
         backgroundColor = .clear
+        collectionView.backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -73,7 +74,7 @@ class WotContentListView: UIView {
         let itemWidth = (UIScreen.main.bounds.width / 2) - (16 + 6)
 
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
         layout.minimumInteritemSpacing = 12
         layout.minimumLineSpacing = 20

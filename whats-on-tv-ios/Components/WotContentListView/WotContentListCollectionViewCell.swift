@@ -24,6 +24,7 @@ class WotContentListCollectionViewCell: UICollectionViewCell {
 
     func setupCell(with content: Content) {
         self.content = content
+        contentView.backgroundColor = .clear
         setupLabel()
         setupImage()
     }
@@ -35,6 +36,7 @@ class WotContentListCollectionViewCell: UICollectionViewCell {
         
         label.text = content.name
         label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        label.textColor = WotTheme.shared.color.light.tint
         label.textAlignment = .left
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false

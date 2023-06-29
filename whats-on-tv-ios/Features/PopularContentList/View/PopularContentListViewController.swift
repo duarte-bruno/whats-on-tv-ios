@@ -29,12 +29,6 @@ class PopularContentListViewController: WotViewController {
         fatalError(StrError.InitCoderNotImplemented.l)
     }
     
-    override func loadView() {
-        view = UIView()
-        view.backgroundColor = .white
-        title = viewModel.title
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +44,7 @@ class PopularContentListViewController: WotViewController {
     // MARK: - Private methods
     
     private func setup() {
+        title = viewModel.title
         viewModel.reaction = self
         setupContentListView()
     }
@@ -62,7 +57,7 @@ class PopularContentListViewController: WotViewController {
             contentListView.leftAnchor.constraint(equalTo: view.leftAnchor),
             contentListView.rightAnchor.constraint(equalTo: view.rightAnchor),
             contentListView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            contentListView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
+            contentListView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
 }

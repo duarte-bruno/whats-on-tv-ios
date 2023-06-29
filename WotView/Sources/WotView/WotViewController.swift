@@ -10,6 +10,13 @@ import WotCore
 
 open class WotViewController: UIViewController {
 
+    open override func loadView() {
+        view = UIView()
+        view.backgroundColor = WotTheme.shared.color.tertiary.tint
+    }
+    
+    // MARK: - Public methods
+    
     public func showAlert(title: String, message: String) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

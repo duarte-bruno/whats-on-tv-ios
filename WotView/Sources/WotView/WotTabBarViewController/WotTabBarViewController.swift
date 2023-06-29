@@ -39,8 +39,14 @@ public class WotTabBarViewController: UITabBarController, WotTabBarViewControlle
         self.tabBar.barStyle = .default
         self.tabBar.tintColor = WotTheme.shared.color.primary.tint
         self.tabBar.unselectedItemTintColor = WotTheme.shared.color.secondary.tint
-        self.tabBar.isTranslucent = false
-        self.tabBar.barTintColor = WotTheme.shared.color.tertiary.tint
+        self.tabBar.isTranslucent = true
+        self.tabBar.barTintColor = .clear
+        self.tabBar.layer.borderColor = UIColor.clear.cgColor
+        
+        let image = UIImage.imageWithColor(color: .clear) //WotTheme.shared.color.dark.tint.withAlphaComponent(0.95))
+        
+        self.tabBar.backgroundImage = image
+        self.tabBar.shadowImage = image
         self.tabBar.itemPositioning = .centered
         addTopMargin()
     }
@@ -48,15 +54,16 @@ public class WotTabBarViewController: UITabBarController, WotTabBarViewControlle
     private func addTopMargin() {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = self.tabBar.barTintColor
+        view.backgroundColor = WotTheme.shared.color.dark.tint.withAlphaComponent(0.95)
         
         self.tabBar.addSubview(view)
+        self.tabBar.sendSubviewToBack(view)
         
         NSLayoutConstraint.activate([
             view.leftAnchor.constraint(equalTo: self.tabBar.leftAnchor),
             view.rightAnchor.constraint(equalTo: self.tabBar.rightAnchor),
-            view.bottomAnchor.constraint(equalTo: self.tabBar.topAnchor),
-            view.heightAnchor.constraint(equalToConstant: 5)
+            view.bottomAnchor.constraint(equalTo: self.tabBar.bottomAnchor),
+            view.topAnchor.constraint(equalTo: self.tabBar.topAnchor, constant: -5),
         ])
     }
     

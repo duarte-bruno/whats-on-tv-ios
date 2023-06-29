@@ -7,6 +7,7 @@
 
 import UIKit
 import WotCore
+import WotView
 import WotService
 
 class PopularContentListCoordinator: WotCoordinator {
@@ -33,7 +34,7 @@ class PopularContentListCoordinator: WotCoordinator {
     // MARK: - Init
     
     init() {
-        self.navigationController = UINavigationController()
+        self.navigationController = WotNavigationController()
         self.httpRequest = HttpRequest()
         
         setupTabBarItem()
