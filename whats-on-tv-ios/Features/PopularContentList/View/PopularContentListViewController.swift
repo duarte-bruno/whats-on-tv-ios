@@ -38,7 +38,7 @@ class PopularContentListViewController: WotViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        viewModel.getContentList()
+        viewModel.updateContentList(contentListView?.currentIndex ?? 0)
     }
     
     // MARK: - Private methods
@@ -71,7 +71,7 @@ extension PopularContentListViewController: WotViewModelReaction {
         case .showAlert(title: let title, message: let message):
             super.showAlert(title: title, message: message)
         case .updateContent:
-            contentListView?.updateContentList(contents: viewModel.contentList)
+            contentListView?.updateContentList(contents: viewModel.currentContentList)
         default:
             return
         }
@@ -82,7 +82,11 @@ extension PopularContentListViewController: WotViewModelReaction {
 
 extension PopularContentListViewController: WotContentListViewDelegate {
     
-    func contentSelected(content: Content) {
+    func contentSelected(_ content: Content) {
         // TODO: Show content detail
+    }
+    
+    func addMoreData(_ currentIndex: Int) {
+        viewModel.updateContentList(contentListView?.currentIndex ?? 0)
     }
 }

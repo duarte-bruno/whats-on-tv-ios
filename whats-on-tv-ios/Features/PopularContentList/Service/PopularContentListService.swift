@@ -12,7 +12,7 @@ protocol PopularContentListServiceProtocol {
     
     init(_ request: HttpRequest)
     
-    func getPopularContent(completion: @escaping (Result<[Content], HttpError>) -> Void)
+    func getPopularContent(pageIndex: Int, completion: @escaping (Result<[Content], HttpError>) -> Void)
 }
 
 class PopularContentListService: PopularContentListServiceProtocol {
@@ -22,8 +22,8 @@ class PopularContentListService: PopularContentListServiceProtocol {
         self.request = request
     }
     
-    func getPopularContent(completion: @escaping (Result<[Content], HttpError>) -> Void) {
-        let params = HttpParams(path: "shows", queryParams: ["page": "0"])
+    func getPopularContent(pageIndex: Int = 0, completion: @escaping (Result<[Content], HttpError>) -> Void) {
+        let params = HttpParams(path: "shows", queryParams: ["page": String(pageIndex)])
         request.get(params, completion: completion)
     }
 }

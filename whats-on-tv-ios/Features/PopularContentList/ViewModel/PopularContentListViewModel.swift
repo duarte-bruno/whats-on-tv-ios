@@ -13,18 +13,20 @@ protocol PopularContentListDelegate: AnyObject {
     
     /// Called when it's view did load and the content list should be updated.
     /// - Parameter sender: ViewModel which made this callback
-    func getContentList(sender: PopularContentListViewModelProtocol)
+    /// - Parameter pageIndex: Current page index
+    func updateContentList(pageIndex: Int, sender: PopularContentListViewModelProtocol)
 }
 
 protocol PopularContentListViewModelProtocol: WotViewModelProtocol {
     
     /// A list os content to be displayed
-    var contentList: [Content] { get }
+    var currentContentList: [Content] { get }
     
     init(delegate: PopularContentListDelegate?)
     
     /// Called when it's view did load and the content list should be updated.
-    func getContentList()
+    /// - Parameter pageIndex: Current page index
+    func updateContentList(_ pageIndex: Int)
     
     /// Update the contenti list displayed on screen
     /// - Parameter contentList: New content list
@@ -40,7 +42,7 @@ class PopularContentListViewModel: PopularContentListViewModelProtocol {
     // MARK: - Public properties
     
     let title: String
-    private(set) var contentList: [Content] {
+    private(set) var currentContentList: [Content] {
         didSet {
             self.reaction?.updateViewState(.updateContent)
         }
@@ -52,17 +54,17 @@ class PopularContentListViewModel: PopularContentListViewModelProtocol {
     required init(delegate: PopularContentListDelegate? = nil) {
         self.delegate = delegate
         self.title = StrPopularContentList.Title.l
-        self.contentList = []
+        self.currentContentList = []
     }
     
     // MARK: - Public methods
     
-    func getContentList() {
-        delegate?.getContentList(sender: self)
+    func updateContentList(_ pageIndex: Int) {
+        delegate?.updateContentList(pageIndex: pageIndex, sender: self)
     }
     
     func updateContentList(_ contentList: [Content]) {
-        self.contentList = contentList
+        self.currentContentList = contentList
     }
     
     func updateViewState(_ viewState: WotViewState) {

@@ -9,11 +9,16 @@ import UIKit
 import WotCore
 
 protocol WotContentListViewDelegate: AnyObject {
-    func contentSelected(content: Content)
+    func contentSelected(_ content: Content)
+    func addMoreData(_ currentIndex: Int)
 }
 
 class WotContentListView: UIView {
 
+    // MARK: - Public properties
+    
+    private(set) var currentIndex: Int
+    
     // MARK: - Private properties
     
     private let collectionView: UICollectionView
@@ -26,6 +31,7 @@ class WotContentListView: UIView {
         self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         self.delegate = delegate
         self.contents = []
+        self.currentIndex = 0
         super.init(frame: .zero)
         
         setupView()
@@ -40,7 +46,8 @@ class WotContentListView: UIView {
     
     func updateContentList(contents: [Content]) {
         DispatchQueue.main.async { [weak self] in
-            self?.contents = contents
+            self?.contents.append(contentsOf: contents)
+            self?.currentIndex += 1
             self?.collectionView.reloadData()
         }
     }
@@ -56,7 +63,7 @@ class WotContentListView: UIView {
     private func setupCollectionView() {
         collectionView.register(WotContentListCollectionViewCell.self, forCellWithReuseIdentifier: WotContentListCollectionViewCell.cellIdentifier)
         collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.prefetchDataSource = self
         
         collectionView.collectionViewLayout = createCollectionLayout()
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -85,12 +92,6 @@ class WotContentListView: UIView {
     }
 }
 
-// MARK: - UICollectionViewDelegate
-
-extension WotContentListView: UICollectionViewDelegate {
-    
-}
-
 // MARK: - UICollectionViewDataSource
 
 extension WotContentListView: UICollectionViewDataSource {
@@ -110,6 +111,16 @@ extension WotContentListView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.contentSelected(content: contents[indexPath.row])
+        delegate?.contentSelected(contents[indexPath.row])
+    }
+}
+
+extension WotContentListView: UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        let indexToReload = contents.count - 20 > 0 ? contents.count - 20 : 0
+        let indexPath = IndexPath(item: indexToReload, section: indexPaths[0].section)
+        if indexPaths.firstIndex(of: indexPath) != nil {
+            delegate?.addMoreData(currentIndex)
+        }
     }
 }

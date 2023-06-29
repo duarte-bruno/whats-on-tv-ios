@@ -10,15 +10,15 @@ import WotCore
 
 extension PopularContentListCoordinator: PopularContentListDelegate {
     
-    func getContentList(sender: PopularContentListViewModelProtocol) {
+    func updateContentList(pageIndex: Int, sender: PopularContentListViewModelProtocol) {
         let service = PopularContentListService(httpRequest)
-        service.getPopularContent { result in
+        service.getPopularContent(pageIndex: pageIndex, completion: { result in
             switch result {
             case .success(let contentList):
                 sender.updateContentList(contentList)
             case .failure(let error):
                 sender.updateViewState(.showAlert(title: StrGeneric.Ops.l, message: error.description))
             }
-        }
+        })
     }
 }
