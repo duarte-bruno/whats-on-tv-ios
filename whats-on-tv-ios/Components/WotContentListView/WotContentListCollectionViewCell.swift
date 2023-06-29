@@ -38,14 +38,14 @@ class WotContentListCollectionViewCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         label.textColor = WotTheme.shared.color.light.tint
         label.textAlignment = .left
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(label)
         
         NSLayoutConstraint.activate([
             label.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             label.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            label.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: 0)
         ])
     }
     
