@@ -19,7 +19,7 @@ protocol PopularContentListDelegate: AnyObject {
 
 protocol PopularContentListViewModelProtocol: WotViewModelProtocol {
     
-    /// A list os content to be displayed
+    /// A list of content to be displayed
     var currentContentList: [Content] { get }
     
     init(delegate: PopularContentListDelegate?)
