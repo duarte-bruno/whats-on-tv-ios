@@ -33,8 +33,15 @@ public struct HttpParams {
         if let params = queryParams {
             var urlQueryParams = [URLQueryItem]()
             
-            for queryParam in params {
-                urlQueryParams.append(URLQueryItem(name: queryParam.key, value: queryParam.value))
+            if let first = params.first, first.key.contains("[]") {
+                let values = first.value.components(separatedBy: ",")
+                for value in values {
+                    urlQueryParams.append(URLQueryItem(name: first.key, value: value))
+                }
+            } else {
+                for queryParam in params {
+                    urlQueryParams.append(URLQueryItem(name: queryParam.key, value: queryParam.value))
+                }
             }
             
             urlComponents?.queryItems = urlQueryParams

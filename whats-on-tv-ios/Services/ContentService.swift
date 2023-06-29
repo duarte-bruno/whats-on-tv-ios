@@ -14,6 +14,7 @@ protocol ContentServiceProtocol {
     
     func getPopularContent(pageIndex: Int, completion: @escaping (Result<[Content], HttpError>) -> Void)
     func searchContent(search: String, completion: @escaping (Result<[ContentSearch], HttpError>) -> Void)
+    func getContentDetails(id: Int, completion: @escaping (Result<ContentDetail, HttpError>) -> Void)
 }
 
 class ContentService: ContentServiceProtocol {
@@ -30,6 +31,12 @@ class ContentService: ContentServiceProtocol {
     
     func searchContent(search: String, completion: @escaping (Result<[ContentSearch], HttpError>) -> Void) {
         let params = HttpParams(path: "search/shows", queryParams: ["q": search])
+        request.get(params, completion: completion)
+    }
+    
+    func getContentDetails(id: Int, completion: @escaping (Result<ContentDetail, HttpError>) -> Void) {
+        let params = HttpParams(path: "search/shows/\(id)", queryParams: ["embed[]": "episodes,seasons"])
+        print(params.createUrl() ?? "")
         request.get(params, completion: completion)
     }
 }
