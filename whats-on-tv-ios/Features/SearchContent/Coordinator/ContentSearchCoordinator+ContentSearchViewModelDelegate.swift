@@ -11,7 +11,7 @@ import WotCore
 extension ContentSearchCoordinator: ContentSearchViewModelDelegate {
     
     func searchContent(_ search: String, sender: ContentSearchViewModelProtocol) {
-        let service = ContentSearchService(httpRequest)
+        let service = ContentService(httpRequest)
         service.searchContent(search: search) { result in
             switch result {
             case .success(let searchContentList):

@@ -11,7 +11,7 @@ import WotCore
 extension PopularContentListCoordinator: PopularContentListDelegate {
     
     func updateContentList(pageIndex: Int, sender: PopularContentListViewModelProtocol) {
-        let service = PopularContentListService(httpRequest)
+        let service = ContentService(httpRequest)
         service.getPopularContent(pageIndex: pageIndex, completion: { result in
             switch result {
             case .success(let contentList):

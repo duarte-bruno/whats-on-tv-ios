@@ -19,7 +19,6 @@
 		75EA10552A4A697100DE79C2 /* WotCore in Frameworks */ = {isa = PBXBuildFile; productRef = 75EA10542A4A697100DE79C2 /* WotCore */; };
 		75EA105B2A4BA0D200DE79C2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105A2A4BA0D200DE79C2 /* MainCoordinator.swift */; };
 		75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */; };
-		75EA10602A4BBC1B00DE79C2 /* PopularContentListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA105F2A4BBC1B00DE79C2 /* PopularContentListService.swift */; };
 		75EA10652A4C56F700DE79C2 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10642A4C56F700DE79C2 /* Content.swift */; };
 		75EA10672A4C5A7800DE79C2 /* PopularContentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10662A4C5A7800DE79C2 /* PopularContentListViewModel.swift */; };
 		75EA10692A4C5B8600DE79C2 /* PopularContentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10682A4C5B8600DE79C2 /* PopularContentListViewController.swift */; };
@@ -29,13 +28,13 @@
 		75EA107A2A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10792A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift */; };
 		75EA10832A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10812A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift */; };
 		75EA10842A4CBBC400DE79C2 /* WotContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10822A4CBBC400DE79C2 /* WotContentListView.swift */; };
-		75EA108D2A4D32EE00DE79C2 /* ContentSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA108C2A4D32EE00DE79C2 /* ContentSearchService.swift */; };
 		75EA108F2A4D337D00DE79C2 /* ContentSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA108E2A4D337D00DE79C2 /* ContentSearch.swift */; };
 		75EA10912A4D344600DE79C2 /* ContentSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10902A4D344600DE79C2 /* ContentSearchCoordinator.swift */; };
 		75EA10932A4D357F00DE79C2 /* StrContentSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10922A4D357F00DE79C2 /* StrContentSearch.swift */; };
 		75EA10952A4D399900DE79C2 /* ContentSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10942A4D399900DE79C2 /* ContentSearchViewModel.swift */; };
 		75EA10972A4DB2B200DE79C2 /* ContentSearchCoordinator+ContentSearchViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10962A4DB2B200DE79C2 /* ContentSearchCoordinator+ContentSearchViewModelDelegate.swift */; };
 		75EA10992A4DB4A200DE79C2 /* ContentSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10982A4DB4A200DE79C2 /* ContentSearchViewController.swift */; };
+		75EA109C2A4DD59B00DE79C2 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA109B2A4DD59B00DE79C2 /* ContentService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 		75EA10532A4A695500DE79C2 /* WotCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WotCore; sourceTree = "<group>"; };
 		75EA105A2A4BA0D200DE79C2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListCoordinator.swift; sourceTree = "<group>"; };
-		75EA105F2A4BBC1B00DE79C2 /* PopularContentListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListService.swift; sourceTree = "<group>"; };
 		75EA10642A4C56F700DE79C2 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		75EA10662A4C5A7800DE79C2 /* PopularContentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListViewModel.swift; sourceTree = "<group>"; };
 		75EA10682A4C5B8600DE79C2 /* PopularContentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContentListViewController.swift; sourceTree = "<group>"; };
@@ -82,13 +80,13 @@
 		75EA10792A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularContentListCoordinator+PopularContentListDelegate.swift"; sourceTree = "<group>"; };
 		75EA10812A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WotContentListCollectionViewCell.swift; sourceTree = "<group>"; };
 		75EA10822A4CBBC400DE79C2 /* WotContentListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WotContentListView.swift; sourceTree = "<group>"; };
-		75EA108C2A4D32EE00DE79C2 /* ContentSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSearchService.swift; sourceTree = "<group>"; };
 		75EA108E2A4D337D00DE79C2 /* ContentSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSearch.swift; sourceTree = "<group>"; };
 		75EA10902A4D344600DE79C2 /* ContentSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSearchCoordinator.swift; sourceTree = "<group>"; };
 		75EA10922A4D357F00DE79C2 /* StrContentSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrContentSearch.swift; sourceTree = "<group>"; };
 		75EA10942A4D399900DE79C2 /* ContentSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSearchViewModel.swift; sourceTree = "<group>"; };
 		75EA10962A4DB2B200DE79C2 /* ContentSearchCoordinator+ContentSearchViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentSearchCoordinator+ContentSearchViewModelDelegate.swift"; sourceTree = "<group>"; };
 		75EA10982A4DB4A200DE79C2 /* ContentSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSearchViewController.swift; sourceTree = "<group>"; };
+		75EA109B2A4DD59B00DE79C2 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +144,7 @@
 		7527240F2A49F2C4002A277C /* whats-on-tv-ios */ = {
 			isa = PBXGroup;
 			children = (
+				75EA109A2A4DD56F00DE79C2 /* Services */,
 				75EA107F2A4CBB9A00DE79C2 /* Components */,
 				75EA10572A4BA05400DE79C2 /* Features */,
 				75EA10562A4B92D500DE79C2 /* SupportFiles */,
@@ -208,7 +207,6 @@
 				75EA10632A4C559900DE79C2 /* ViewModel */,
 				75EA10622A4C558F00DE79C2 /* View */,
 				75EA10612A4C558700DE79C2 /* Model */,
-				75EA105E2A4BBBF800DE79C2 /* Service */,
 			);
 			path = PopularContentList;
 			sourceTree = "<group>";
@@ -219,14 +217,6 @@
 				75EA105A2A4BA0D200DE79C2 /* MainCoordinator.swift */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		75EA105E2A4BBBF800DE79C2 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				75EA105F2A4BBC1B00DE79C2 /* PopularContentListService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		75EA10612A4C558700DE79C2 /* Model */ = {
@@ -315,7 +305,6 @@
 		75EA10852A4D326400DE79C2 /* SearchContent */ = {
 			isa = PBXGroup;
 			children = (
-				75EA108B2A4D32B100DE79C2 /* Service */,
 				75EA108A2A4D32A300DE79C2 /* Model */,
 				75EA10892A4D329A00DE79C2 /* View */,
 				75EA10882A4D329200DE79C2 /* ViewModel */,
@@ -366,12 +355,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		75EA108B2A4D32B100DE79C2 /* Service */ = {
+		75EA109A2A4DD56F00DE79C2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				75EA108C2A4D32EE00DE79C2 /* ContentSearchService.swift */,
+				75EA109B2A4DD59B00DE79C2 /* ContentService.swift */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,10 +508,8 @@
 				75EA10952A4D399900DE79C2 /* ContentSearchViewModel.swift in Sources */,
 				75EA10772A4C728100DE79C2 /* StrPopularContentList.swift in Sources */,
 				75EA105B2A4BA0D200DE79C2 /* MainCoordinator.swift in Sources */,
-				75EA108D2A4D32EE00DE79C2 /* ContentSearchService.swift in Sources */,
 				75EA10842A4CBBC400DE79C2 /* WotContentListView.swift in Sources */,
 				752724112A49F2C4002A277C /* AppDelegate.swift in Sources */,
-				75EA10602A4BBC1B00DE79C2 /* PopularContentListService.swift in Sources */,
 				75EA10992A4DB4A200DE79C2 /* ContentSearchViewController.swift in Sources */,
 				75EA10932A4D357F00DE79C2 /* StrContentSearch.swift in Sources */,
 				75EA108F2A4D337D00DE79C2 /* ContentSearch.swift in Sources */,
@@ -530,6 +517,7 @@
 				75EA10912A4D344600DE79C2 /* ContentSearchCoordinator.swift in Sources */,
 				752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */,
 				75EA10652A4C56F700DE79C2 /* Content.swift in Sources */,
+				75EA109C2A4DD59B00DE79C2 /* ContentService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
