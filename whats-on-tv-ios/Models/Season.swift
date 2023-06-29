@@ -11,5 +11,5 @@ struct Season: Codable {
     let id: Int
     let number: Int
     let image: Image?
-    let episodes: [Episode]?
+    var episodes: [Episode]?
 }

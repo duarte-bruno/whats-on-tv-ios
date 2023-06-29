@@ -35,8 +35,7 @@ class ContentService: ContentServiceProtocol {
     }
     
     func getContentDetails(id: Int, completion: @escaping (Result<ContentDetail, HttpError>) -> Void) {
-        let params = HttpParams(path: "search/shows/\(id)", queryParams: ["embed[]": "episodes,seasons"])
-        print(params.createUrl() ?? "")
+        let params = HttpParams(path: "shows/\(id)", queryParams: ["embed[]": "episodes,seasons"])
         request.get(params, completion: completion)
     }
 }

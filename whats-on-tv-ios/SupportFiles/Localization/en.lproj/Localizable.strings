@@ -23,3 +23,7 @@
 
 "StrContentSearch.Title" = "Search";
 "StrContentSearch.TypeYourSearch" = "Type your search";
+
+// MARK: - StrContentDetail
+
+"StrContentDetail.Title" = "Details";

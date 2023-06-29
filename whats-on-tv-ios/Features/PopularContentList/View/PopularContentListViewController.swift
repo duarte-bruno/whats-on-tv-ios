@@ -83,7 +83,7 @@ extension PopularContentListViewController: WotViewModelReaction {
 extension PopularContentListViewController: WotContentListViewWithPaginationDelegate {
     
     func contentSelected(_ content: Content) {
-        // TODO: Show content detail
+        viewModel.showContentDetail(content: content)
     }
     
     func addMoreData(_ currentIndex: Int) {

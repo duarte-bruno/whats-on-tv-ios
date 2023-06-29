@@ -74,6 +74,7 @@ class WotContentListView: UIView {
     private func setupCollectionView() {
         collectionView.register(WotContentListCollectionViewCell.self, forCellWithReuseIdentifier: WotContentListCollectionViewCell.cellIdentifier)
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.prefetchDataSource = self
         
         collectionView.collectionViewLayout = createCollectionLayout()
@@ -103,6 +104,15 @@ class WotContentListView: UIView {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
+extension WotContentListView: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.contentSelected(contents[indexPath.row])
+    }
+}
+
 // MARK: - UICollectionViewDataSource
 
 extension WotContentListView: UICollectionViewDataSource {
@@ -119,10 +129,6 @@ extension WotContentListView: UICollectionViewDataSource {
         
         cell.setupCell(with: contents[indexPath.row])
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.contentSelected(contents[indexPath.row])
     }
 }
 

@@ -39,6 +39,7 @@ class WotContentListCollectionViewCell: UICollectionViewCell {
         label.textColor = WotTheme.shared.color.light.tint
         label.textAlignment = .left
         label.numberOfLines = 0
+        label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(label)
         
@@ -55,6 +56,7 @@ class WotContentListCollectionViewCell: UICollectionViewCell {
         image.loadImageUsing(content.image?.medium ?? "")
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
+        image.isUserInteractionEnabled = false
         image.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(image)
         

@@ -27,8 +27,9 @@ class PopularContentListCoordinator: WotCoordinator {
         return StrPopularContentList.Title.l
     }
     
-    private enum Screen {
+    enum Screen {
         case popularContentList
+        case contentDetail(_ content: Content)
     }
     
     // MARK: - Init
@@ -39,6 +40,12 @@ class PopularContentListCoordinator: WotCoordinator {
         
         setupTabBarItem()
         setupNavigation()
+    }
+    
+    // MARK: - Public methods
+    
+    func showNext(screen: Screen) {
+        navigationController.pushViewController(getScreen(screen), animated: true)
     }
     
     // MARK: - Private methods
@@ -66,6 +73,10 @@ class PopularContentListCoordinator: WotCoordinator {
         case .popularContentList:
             let viewModel = PopularContentListViewModel(delegate: self)
             let controller = PopularContentListViewController(viewModel: viewModel)
+            return controller
+        case .contentDetail(let content):
+            let viewModel = ContentDetailViewModel(contentId: content.id, delegate: self)
+            let controller = ContentDetailViewController(viewModel: viewModel)
             return controller
         }
     }

@@ -15,6 +15,10 @@ protocol PopularContentListDelegate: AnyObject {
     /// - Parameter sender: ViewModel which made this callback
     /// - Parameter pageIndex: Current page index
     func updateContentList(pageIndex: Int, sender: PopularContentListViewModelProtocol)
+    
+    /// Called when an item is selected
+    /// - Parameter content: Content to show detail
+    func showContentDetail(content: Content)
 }
 
 protocol PopularContentListViewModelProtocol: WotViewModelProtocol {
@@ -31,6 +35,10 @@ protocol PopularContentListViewModelProtocol: WotViewModelProtocol {
     /// Update the contenti list displayed on screen
     /// - Parameter contentList: New content list
     func updateContentList(_ contentList: [Content])
+    
+    /// Called when an item is selected
+    /// - Parameter content: Content to show detail
+    func showContentDetail(content: Content)
 }
 
 class PopularContentListViewModel: PopularContentListViewModelProtocol {
@@ -69,5 +77,9 @@ class PopularContentListViewModel: PopularContentListViewModelProtocol {
     
     func updateViewState(_ viewState: WotViewState) {
         self.reaction?.updateViewState(viewState)
+    }
+    
+    func showContentDetail(content: Content) {
+        self.delegate?.showContentDetail(content: content)
     }
 }

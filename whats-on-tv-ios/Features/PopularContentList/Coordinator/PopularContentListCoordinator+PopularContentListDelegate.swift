@@ -21,4 +21,8 @@ extension PopularContentListCoordinator: PopularContentListDelegate {
             }
         })
     }
+    
+    func showContentDetail(content: Content) {
+        showNext(screen: .contentDetail(content))
+    }
 }
