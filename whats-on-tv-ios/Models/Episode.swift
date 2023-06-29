@@ -12,6 +12,6 @@ struct Episode: Codable {
     let name: String
     let number: Int
     let season: Int
-    let summary: String
+    let summary: String?
     let image: Image?
 }

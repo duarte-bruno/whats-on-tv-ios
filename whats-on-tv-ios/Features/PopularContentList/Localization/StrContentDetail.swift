@@ -17,4 +17,5 @@ public enum StrContentDetail: String, WotLocalizeable {
     }
     
     case Title
+    case Schedule
 }

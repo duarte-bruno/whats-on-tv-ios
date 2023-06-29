@@ -11,14 +11,16 @@ import WotView
 
 class ContentDetailViewController: WotViewController {
 
-    // MARK: - Private properties
+    // MARK: - Public properties
     
-    private var viewModel: ContentDetailViewModelProtocol
+    var viewModel: ContentDetailViewModelProtocol
+    let contentView: WotGenericScrollContentView
     
     // MARK: - init
     
     init(viewModel: ContentDetailViewModelProtocol) {
         self.viewModel = viewModel
+        self.contentView = WotGenericScrollContentView()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -55,8 +57,9 @@ extension ContentDetailViewController: WotViewModelReaction {
         case .showAlert(title: let title, message: let message):
             super.showAlert(title: title, message: message)
         case .updateContent:
-            // Update screen content
-            return
+            DispatchQueue.main.async { [weak self] in
+                self?.setupDatailsContent()
+            }
         default:
             return
         }

@@ -40,6 +40,7 @@
 		75EA10A52A4E015900DE79C2 /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10A42A4E015900DE79C2 /* ContentDetailViewController.swift */; };
 		75EA10A72A4E01DA00DE79C2 /* StrContentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10A62A4E01DA00DE79C2 /* StrContentDetail.swift */; };
 		75EA10A92A4E038100DE79C2 /* PopularContentListCoordinator+ContentDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10A82A4E038100DE79C2 /* PopularContentListCoordinator+ContentDetailDelegate.swift */; };
+		75EA10AB2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10AA2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		75EA10A42A4E015900DE79C2 /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
 		75EA10A62A4E01DA00DE79C2 /* StrContentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrContentDetail.swift; sourceTree = "<group>"; };
 		75EA10A82A4E038100DE79C2 /* PopularContentListCoordinator+ContentDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularContentListCoordinator+ContentDetailDelegate.swift"; sourceTree = "<group>"; };
+		75EA10AA2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentDetailViewController+Views.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			children = (
 				75EA10682A4C5B8600DE79C2 /* PopularContentListViewController.swift */,
 				75EA10A42A4E015900DE79C2 /* ContentDetailViewController.swift */,
+				75EA10AA2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				75EA10992A4DB4A200DE79C2 /* ContentSearchViewController.swift in Sources */,
 				75EA10A32A4DFCDD00DE79C2 /* ContentDetailViewModel.swift in Sources */,
 				75EA10A72A4E01DA00DE79C2 /* StrContentDetail.swift in Sources */,
+				75EA10AB2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift in Sources */,
 				75EA10932A4D357F00DE79C2 /* StrContentSearch.swift in Sources */,
 				75EA10A52A4E015900DE79C2 /* ContentDetailViewController.swift in Sources */,
 				75EA10972A4DB2B200DE79C2 /* ContentSearchCoordinator+ContentSearchViewModelDelegate.swift in Sources */,

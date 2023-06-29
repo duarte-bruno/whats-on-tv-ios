@@ -34,7 +34,7 @@ struct ContentDetail: Codable {
     let image: Image?
     let genres: [String]
     let schedule: Schedule
-    let summary: String
+    let summary: String?
     let averageRuntime: Int
     let status: String
     var seasons: [Season]?
