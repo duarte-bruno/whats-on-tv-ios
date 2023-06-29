@@ -77,7 +77,7 @@ class WotContentListView: UIView {
         layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
         layout.minimumInteritemSpacing = 12
-        layout.minimumLineSpacing = 20
+        layout.minimumLineSpacing = 10
         
         layout.itemSize = CGSize(width: itemWidth, height: (itemWidth * (1.0/0.67)) + 6 + 40)
         
