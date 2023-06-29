@@ -12,7 +12,7 @@ open class WotViewController: UIViewController {
 
     open override func loadView() {
         view = UIView()
-        view.backgroundColor = WotTheme.shared.color.tertiary.tint
+        view.backgroundColor = WotTheme.shared.color.tertiary.subtle
     }
     
     // MARK: - Public methods

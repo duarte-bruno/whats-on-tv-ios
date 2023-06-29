@@ -13,7 +13,7 @@ public final class WotColorTheme: WotColorThemeProtocol {
     
     public var secondary: WotColor { return WotColor(tint: "219EBC", subtle: "8ECAE6") }
     
-    public var tertiary: WotColor { return WotColor(tint: "023047", subtle: "0579B3") }
+    public var tertiary: WotColor { return WotColor(tint: "023047", subtle: "044362") }
     
     public var light: WotColor { return WotColor(tint: "FFFFFF", subtle: "E0E0E0") }
     
