@@ -31,6 +31,8 @@
 		75EA10842A4CBBC400DE79C2 /* WotContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10822A4CBBC400DE79C2 /* WotContentListView.swift */; };
 		75EA108D2A4D32EE00DE79C2 /* SearchContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA108C2A4D32EE00DE79C2 /* SearchContentService.swift */; };
 		75EA108F2A4D337D00DE79C2 /* ContentSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA108E2A4D337D00DE79C2 /* ContentSearch.swift */; };
+		75EA10912A4D344600DE79C2 /* ContentSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10902A4D344600DE79C2 /* ContentSearchCoordinator.swift */; };
+		75EA10932A4D357F00DE79C2 /* StrContentSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10922A4D357F00DE79C2 /* StrContentSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		75EA10822A4CBBC400DE79C2 /* WotContentListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WotContentListView.swift; sourceTree = "<group>"; };
 		75EA108C2A4D32EE00DE79C2 /* SearchContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContentService.swift; sourceTree = "<group>"; };
 		75EA108E2A4D337D00DE79C2 /* ContentSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSearch.swift; sourceTree = "<group>"; };
+		75EA10902A4D344600DE79C2 /* ContentSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSearchCoordinator.swift; sourceTree = "<group>"; };
+		75EA10922A4D357F00DE79C2 /* StrContentSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrContentSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +322,7 @@
 		75EA10862A4D327D00DE79C2 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				75EA10902A4D344600DE79C2 /* ContentSearchCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 		75EA10872A4D328900DE79C2 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				75EA10922A4D357F00DE79C2 /* StrContentSearch.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -507,7 +513,9 @@
 				75EA10842A4CBBC400DE79C2 /* WotContentListView.swift in Sources */,
 				752724112A49F2C4002A277C /* AppDelegate.swift in Sources */,
 				75EA10602A4BBC1B00DE79C2 /* PopularContentListService.swift in Sources */,
+				75EA10932A4D357F00DE79C2 /* StrContentSearch.swift in Sources */,
 				75EA108F2A4D337D00DE79C2 /* ContentSearch.swift in Sources */,
+				75EA10912A4D344600DE79C2 /* ContentSearchCoordinator.swift in Sources */,
 				752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */,
 				75EA10652A4C56F700DE79C2 /* Content.swift in Sources */,
 			);

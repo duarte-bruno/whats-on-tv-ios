@@ -1,8 +1,8 @@
 //
-//  PopularContentListCoordinator.swift
+//  ContentSearchCoordinator.swift
 //  whats-on-tv-ios
 //
-//  Created by Bruno Duarte on 27/06/23.
+//  Created by Bruno Duarte on 29/06/23.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import WotCore
 import WotView
 import WotService
 
-class PopularContentListCoordinator: WotCoordinator {
+class ContentSearchCoordinator: WotCoordinator {
     
     // MARK: - Public properties
     
@@ -24,11 +24,11 @@ class PopularContentListCoordinator: WotCoordinator {
     
     private let navigationController: WotNavigationController
     private var title: String {
-        return StrPopularContentList.Title.l
+        return StrContentSearch.Title.l
     }
     
     private enum Screen {
-        case popularContentList
+        case contentSearch
     }
     
     // MARK: - Init
@@ -46,13 +46,13 @@ class PopularContentListCoordinator: WotCoordinator {
     private func setupTabBarItem() {
         let item = UITabBarItem(
             title: title,
-            image: UIImage(systemName: "play.square.stack"),
-            selectedImage: UIImage(systemName: "play.square.stack.fill"))
+            image: UIImage(systemName: "magnifyingglass.circle"),
+            selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
         navigationController.tabBarItem = item
     }
     
     private func setupNavigation() {
-        navigationController.viewControllers = [getScreen(.popularContentList)]
+        navigationController.viewControllers = [getScreen(.contentSearch)]
         navigationController.navigationBar.prefersLargeTitles = true
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationController.navigationBar.titleTextAttributes = textAttributes
@@ -63,8 +63,8 @@ class PopularContentListCoordinator: WotCoordinator {
     
     private func getScreen(_ screen: Screen) -> UIViewController {
         switch screen {
-        case .popularContentList:
-            let viewModel = PopularContentListViewModel(delegate: self)
+        case .contentSearch:
+            let viewModel = PopularContentListViewModel(delegate: nil)
             let controller = PopularContentListViewController(viewModel: viewModel)
             return controller
         }

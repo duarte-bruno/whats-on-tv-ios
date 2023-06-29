@@ -21,6 +21,7 @@ class MainCoordinator: WotCoordinator {
     
     private var tabBarViewController: WotTabBarViewControllerProtocol? = nil
     private var popularContentListCoordinator: PopularContentListCoordinator? = nil
+    private var contentSearchCoordinator: ContentSearchCoordinator? = nil
     
     // MARK: - Initialization
     
@@ -33,13 +34,18 @@ class MainCoordinator: WotCoordinator {
     
     private func setupCoordinators() {
         self.popularContentListCoordinator = PopularContentListCoordinator()
+        self.contentSearchCoordinator = ContentSearchCoordinator()
     }
     
     private func setupTabBarController() {
-        guard let popularContentListCoordinator else { return }
+        guard
+            let popularContentListCoordinator,
+            let contentSearchCoordinator
+        else { return }
         
         self.tabBarViewController = WotTabBarViewController(coordinators: [
             popularContentListCoordinator,
+            contentSearchCoordinator
         ])
     }
 }

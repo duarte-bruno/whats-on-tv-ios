@@ -18,3 +18,7 @@
 // MARK: - StrPopularContentList
 
 "StrPopularContentList.Title" = "Popular";
+
+// MARK: - StrContentSearch
+
+"StrContentSearch.Title" = "Search";
