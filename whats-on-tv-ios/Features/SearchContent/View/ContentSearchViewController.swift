@@ -16,6 +16,13 @@ class ContentSearchViewController: WotViewController {
     private var viewModel: ContentSearchViewModelProtocol
     private var contentListView: WotContentListView?
     
+    private lazy var searchBarController: UISearchController = {
+        let controller = UISearchController()
+        controller.searchBar.placeholder = StrContentSearch.TypeYourSearch.l
+        controller.searchBar.searchBarStyle = .minimal
+        return controller
+    }()
+    
     // MARK: - init
     
     init(viewModel: ContentSearchViewModelProtocol) {
@@ -41,6 +48,7 @@ class ContentSearchViewController: WotViewController {
         title = viewModel.title
         viewModel.reaction = self
         setupContentListView()
+        setupSearchBar()
     }
     
     private func setupContentListView() {
@@ -54,6 +62,11 @@ class ContentSearchViewController: WotViewController {
             contentListView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
+    
+    private func setupSearchBar() {
+        searchBarController.searchResultsUpdater = self
+        navigationItem.searchController = searchBarController
+    }
 }
 
 // MARK: - WotViewModelReaction
@@ -65,7 +78,7 @@ extension ContentSearchViewController: WotViewModelReaction {
         case .showAlert(title: let title, message: let message):
             super.showAlert(title: title, message: message)
         case .updateContent:
-            contentListView?.updateContentList(contents: viewModel.searchContentList)
+            contentListView?.updateContentList(contents: viewModel.searchContentList, replaceOldContent: true)
         default:
             return
         }
@@ -79,7 +92,14 @@ extension ContentSearchViewController: WotContentListViewDelegate {
     func contentSelected(_ content: Content) {
         // TODO: Show content detail
     }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension ContentSearchViewController: UISearchResultsUpdating {
     
-    func addMoreData(_ currentIndex: Int) {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let query = searchController.searchBar.text else { return }
+        viewModel.searchContent(query)
     }
 }

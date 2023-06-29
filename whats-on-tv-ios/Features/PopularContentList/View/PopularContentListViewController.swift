@@ -80,7 +80,7 @@ extension PopularContentListViewController: WotViewModelReaction {
 
 // MARK: - ContentListViewDelegate
 
-extension PopularContentListViewController: WotContentListViewDelegate {
+extension PopularContentListViewController: WotContentListViewWithPaginationDelegate {
     
     func contentSelected(_ content: Content) {
         // TODO: Show content detail

@@ -17,4 +17,5 @@ public enum StrContentSearch: String, WotLocalizeable {
     }
     
     case Title
+    case TypeYourSearch
 }

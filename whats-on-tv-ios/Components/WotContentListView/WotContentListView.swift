@@ -10,6 +10,9 @@ import WotCore
 
 protocol WotContentListViewDelegate: AnyObject {
     func contentSelected(_ content: Content)
+}
+
+protocol WotContentListViewWithPaginationDelegate: WotContentListViewDelegate {
     func addMoreData(_ currentIndex: Int)
 }
 
@@ -24,14 +27,16 @@ class WotContentListView: UIView {
     private let collectionView: UICollectionView
     private weak var delegate: WotContentListViewDelegate?
     private var contents: [Content]
+    private let enablePagination: Bool
     
     // MARK: - Init
     
-    init(delegate: WotContentListViewDelegate?) {
+    init(delegate: WotContentListViewDelegate?, enablePagination: Bool = true) {
         self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         self.delegate = delegate
         self.contents = []
         self.currentIndex = 0
+        self.enablePagination = enablePagination
         super.init(frame: .zero)
         
         setupView()
@@ -44,10 +49,16 @@ class WotContentListView: UIView {
     
     // MARK: - Public methods
     
-    func updateContentList(contents: [Content]) {
+    func updateContentList(contents: [Content], replaceOldContent: Bool = false) {
         DispatchQueue.main.async { [weak self] in
-            self?.contents.append(contentsOf: contents)
-            self?.currentIndex += 1
+            if replaceOldContent {
+                self?.contents = contents
+                self?.currentIndex = 0
+            } else {
+                self?.contents.append(contentsOf: contents)
+                self?.currentIndex += 1
+            }
+            
             self?.collectionView.reloadData()
         }
     }
@@ -117,10 +128,14 @@ extension WotContentListView: UICollectionViewDataSource {
 
 extension WotContentListView: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        guard enablePagination else { return }
+        
         let indexToReload = contents.count - 20 > 0 ? contents.count - 20 : 0
         let indexPath = IndexPath(item: indexToReload, section: indexPaths[0].section)
         if indexPaths.firstIndex(of: indexPath) != nil {
-            delegate?.addMoreData(currentIndex)
+            if let delegate = delegate as? WotContentListViewWithPaginationDelegate {
+                delegate.addMoreData(currentIndex)
+            }
         }
     }
 }
