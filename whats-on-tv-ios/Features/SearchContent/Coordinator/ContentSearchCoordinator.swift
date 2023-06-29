@@ -64,8 +64,8 @@ class ContentSearchCoordinator: WotCoordinator {
     private func getScreen(_ screen: Screen) -> UIViewController {
         switch screen {
         case .contentSearch:
-            let viewModel = PopularContentListViewModel(delegate: nil)
-            let controller = PopularContentListViewController(viewModel: viewModel)
+            let viewModel = ContentSearchViewModel(delegate: self)
+            let controller = ContentSearchViewController(viewModel: viewModel)
             return controller
         }
     }
