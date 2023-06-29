@@ -15,6 +15,10 @@ protocol ContentSearchViewModelDelegate: AnyObject {
     /// - Parameter sender: ViewModel which made this callback
     /// - Parameter search: Search term
     func searchContent(_ search: String, sender: ContentSearchViewModelProtocol)
+    
+    /// Called when an item is selected
+    /// - Parameter content: Content to show detail
+    func showContentDetail(content: Content)
 }
 
 protocol ContentSearchViewModelProtocol: WotViewModelProtocol {
@@ -31,6 +35,10 @@ protocol ContentSearchViewModelProtocol: WotViewModelProtocol {
     /// Update the contenti list displayed on screen
     /// - Parameter searchContentList: A list of content to be displayed
     func updateSearchContentList(_ searchContentList: [ContentSearch])
+    
+    /// Called when an item is selected
+    /// - Parameter content: Content to show detail
+    func showContentDetail(content: Content)
 }
 
 class ContentSearchViewModel: ContentSearchViewModelProtocol {
@@ -74,5 +82,9 @@ class ContentSearchViewModel: ContentSearchViewModelProtocol {
     
     func updateViewState(_ viewState: WotViewState) {
         self.reaction?.updateViewState(viewState)
+    }
+    
+    func showContentDetail(content: Content) {
+        self.delegate?.showContentDetail(content: content)
     }
 }

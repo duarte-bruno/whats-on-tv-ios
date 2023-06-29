@@ -90,7 +90,7 @@ extension ContentSearchViewController: WotViewModelReaction {
 extension ContentSearchViewController: WotContentListViewDelegate {
     
     func contentSelected(_ content: Content) {
-        // TODO: Show content detail
+        viewModel.showContentDetail(content: content)
     }
 }
 

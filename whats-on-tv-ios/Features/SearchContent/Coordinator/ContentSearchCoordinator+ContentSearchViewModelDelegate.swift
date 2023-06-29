@@ -21,4 +21,8 @@ extension ContentSearchCoordinator: ContentSearchViewModelDelegate {
             }
         }
     }
+    
+    func showContentDetail(content: Content) {
+        showNext(screen: .contentDetail(content))
+    }
 }

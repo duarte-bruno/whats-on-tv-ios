@@ -27,8 +27,9 @@ class ContentSearchCoordinator: WotCoordinator {
         return StrContentSearch.Title.l
     }
     
-    private enum Screen {
+    enum Screen {
         case contentSearch
+        case contentDetail(_ content: Content)
     }
     
     // MARK: - Init
@@ -39,6 +40,12 @@ class ContentSearchCoordinator: WotCoordinator {
         
         setupTabBarItem()
         setupNavigation()
+    }
+    
+    // MARK: - Public methods
+    
+    func showNext(screen: Screen) {
+        navigationController.pushViewController(getScreen(screen), animated: true)
     }
     
     // MARK: - Private methods
@@ -66,6 +73,10 @@ class ContentSearchCoordinator: WotCoordinator {
         case .contentSearch:
             let viewModel = ContentSearchViewModel(delegate: self)
             let controller = ContentSearchViewController(viewModel: viewModel)
+            return controller
+        case .contentDetail(let content):
+            let viewModel = ContentDetailViewModel(contentId: content.id, delegate: self)
+            let controller = ContentDetailViewController(viewModel: viewModel)
             return controller
         }
     }
