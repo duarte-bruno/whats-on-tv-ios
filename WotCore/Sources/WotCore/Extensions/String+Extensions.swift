@@ -26,4 +26,8 @@ public extension String {
 
         return NSLocalizedString(self, bundle: bundle, comment: "")
     }
+    
+    func htmlSanitized() -> String {
+        return self.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+    }
 }
