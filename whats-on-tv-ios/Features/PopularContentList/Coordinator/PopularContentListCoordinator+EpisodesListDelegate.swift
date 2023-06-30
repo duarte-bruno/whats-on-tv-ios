@@ -10,6 +10,6 @@ import Foundation
 extension PopularContentListCoordinator: EpisodesListDelegate {
     
     func showEpisodeDetail(episode: Episode) {
-        // TODO: Show episode detail
+        showNext(screen: .episodeDetail(episode))
     }
 }

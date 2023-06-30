@@ -31,6 +31,7 @@ class ContentSearchCoordinator: WotCoordinator {
         case contentSearch
         case contentDetail(_ content: Content)
         case episodesList(_ contentDetail: ContentDetail)
+        case episodeDetail(_ episode: Episode)
     }
     
     // MARK: - Init
@@ -82,6 +83,10 @@ class ContentSearchCoordinator: WotCoordinator {
         case .episodesList(let contentDetail):
             let viewModel = EpisodesListViewModel(contentDetail: contentDetail, delegate: self)
             let controller = EpisodesListViewController(viewModel: viewModel)
+            return controller
+        case .episodeDetail(let episode):
+            let viewModel = EpisodeDetailViewModel(episode: episode)
+            let controller = EpisodeDetailViewController(viewModel: viewModel)
             return controller
         }
     }

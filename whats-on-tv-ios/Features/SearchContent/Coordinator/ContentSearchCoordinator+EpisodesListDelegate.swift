@@ -10,6 +10,6 @@ import Foundation
 extension ContentSearchCoordinator: EpisodesListDelegate {
     
     func showEpisodeDetail(episode: Episode) {
-        // TODO: Show episode detail
+        showNext(screen: .episodeDetail(episode))
     }
 }

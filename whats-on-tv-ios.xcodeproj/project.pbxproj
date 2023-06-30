@@ -50,6 +50,9 @@
 		75EA10BA2A4E582F00DE79C2 /* WotEpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B92A4E582F00DE79C2 /* WotEpisodeListView.swift */; };
 		75EA10BC2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10BB2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift */; };
 		75EA10BE2A4E649100DE79C2 /* WotEpisodeListHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10BD2A4E649100DE79C2 /* WotEpisodeListHeaderReusableView.swift */; };
+		75EA10C02A4E719D00DE79C2 /* EpisodeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10BF2A4E719D00DE79C2 /* EpisodeDetailViewModel.swift */; };
+		75EA10C22A4E731500DE79C2 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10C12A4E731500DE79C2 /* EpisodeDetailViewController.swift */; };
+		75EA10C42A4E73A200DE79C2 /* EpisodeDetailViewController+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10C32A4E73A200DE79C2 /* EpisodeDetailViewController+Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,9 @@
 		75EA10B92A4E582F00DE79C2 /* WotEpisodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotEpisodeListView.swift; sourceTree = "<group>"; };
 		75EA10BB2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotEpisodeListCollectionViewCell.swift; sourceTree = "<group>"; };
 		75EA10BD2A4E649100DE79C2 /* WotEpisodeListHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotEpisodeListHeaderReusableView.swift; sourceTree = "<group>"; };
+		75EA10BF2A4E719D00DE79C2 /* EpisodeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewModel.swift; sourceTree = "<group>"; };
+		75EA10C12A4E731500DE79C2 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		75EA10C32A4E73A200DE79C2 /* EpisodeDetailViewController+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EpisodeDetailViewController+Views.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +262,8 @@
 				75EA10A42A4E015900DE79C2 /* ContentDetailViewController.swift */,
 				75EA10AA2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift */,
 				75EA10B22A4E54F600DE79C2 /* EpisodesListViewController.swift */,
+				75EA10C12A4E731500DE79C2 /* EpisodeDetailViewController.swift */,
+				75EA10C32A4E73A200DE79C2 /* EpisodeDetailViewController+Views.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 				75EA10662A4C5A7800DE79C2 /* PopularContentListViewModel.swift */,
 				75EA10A22A4DFCDD00DE79C2 /* ContentDetailViewModel.swift */,
 				75EA10AE2A4E526B00DE79C2 /* EpisodesListViewModel.swift */,
+				75EA10BF2A4E719D00DE79C2 /* EpisodeDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -547,9 +556,11 @@
 			files = (
 				75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */,
 				75EA10B12A4E540800DE79C2 /* StrEpisodesList.swift in Sources */,
+				75EA10C42A4E73A200DE79C2 /* EpisodeDetailViewController+Views.swift in Sources */,
 				75EA10672A4C5A7800DE79C2 /* PopularContentListViewModel.swift in Sources */,
 				75EA10692A4C5B8600DE79C2 /* PopularContentListViewController.swift in Sources */,
 				75EA10B32A4E54F600DE79C2 /* EpisodesListViewController.swift in Sources */,
+				75EA10C02A4E719D00DE79C2 /* EpisodeDetailViewModel.swift in Sources */,
 				75EA10BA2A4E582F00DE79C2 /* WotEpisodeListView.swift in Sources */,
 				75EA10A12A4DDDD900DE79C2 /* Season.swift in Sources */,
 				75EA10BC2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift in Sources */,
@@ -574,6 +585,7 @@
 				75EA10A52A4E015900DE79C2 /* ContentDetailViewController.swift in Sources */,
 				75EA10972A4DB2B200DE79C2 /* ContentSearchCoordinator+ContentSearchViewModelDelegate.swift in Sources */,
 				75EA10912A4D344600DE79C2 /* ContentSearchCoordinator.swift in Sources */,
+				75EA10C22A4E731500DE79C2 /* EpisodeDetailViewController.swift in Sources */,
 				752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */,
 				75EA10652A4C56F700DE79C2 /* Content.swift in Sources */,
 				75EA109C2A4DD59B00DE79C2 /* ContentService.swift in Sources */,

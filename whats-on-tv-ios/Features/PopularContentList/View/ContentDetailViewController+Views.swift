@@ -41,6 +41,7 @@ extension ContentDetailViewController {
         cover.loadImageUsing(imageUrl)
         
         cover.contentMode = .scaleAspectFill
+        cover.clipsToBounds = true
         cover.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.contentStackView.addArrangedSubview(cover)
