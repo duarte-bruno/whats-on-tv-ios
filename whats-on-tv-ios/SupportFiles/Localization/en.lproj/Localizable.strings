@@ -33,3 +33,5 @@
 // MARK: - StrEpisodesList
 
 "StrEpisodesList.Title" = "Episodes";
+"StrEpisodesList.Season" = "Season";
+

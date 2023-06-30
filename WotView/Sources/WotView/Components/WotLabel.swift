@@ -25,7 +25,7 @@ public class WotLabel: UILabel {
     
     // MARK: - init
     
-    public init(text: String) {
+    public init(text: String = "") {
         self.insets = UIEdgeInsets.zero
         super.init(frame: .zero)
         
@@ -63,7 +63,7 @@ public class WotLabel: UILabel {
 
 public class WotBoldLabel: WotLabel {
 
-    public override init(text: String) {
+    public override init(text: String = "") {
         super.init(text: text)
         
         self.font = UIFont.systemFont(ofSize: 15, weight: .bold)
@@ -76,7 +76,7 @@ public class WotBoldLabel: WotLabel {
 
 public class WotTitleLabel: WotLabel {
 
-    public override init(text: String) {
+    public override init(text: String = "") {
         super.init(text: text)
         
         self.font = UIFont.systemFont(ofSize: 25, weight: .bold)

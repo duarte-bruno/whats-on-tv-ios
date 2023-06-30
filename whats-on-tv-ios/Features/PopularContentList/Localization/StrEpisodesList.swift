@@ -17,4 +17,5 @@ public enum StrEpisodesList: String, WotLocalizeable {
     }
     
     case Title
+    case Season
 }

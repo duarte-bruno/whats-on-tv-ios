@@ -22,7 +22,7 @@ class EpisodesListViewController: WotViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         
-        self.episodeListView = WotEpisodeListView(episodes: viewModel.contentDetail.seasons?[0].episodes ?? [], delegate: self)
+        self.episodeListView = WotEpisodeListView(seasons: viewModel.contentDetail.seasons ?? [], delegate: self)
     }
     
     required init?(coder: NSCoder) {

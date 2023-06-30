@@ -49,6 +49,7 @@
 		75EA10B72A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B62A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift */; };
 		75EA10BA2A4E582F00DE79C2 /* WotEpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B92A4E582F00DE79C2 /* WotEpisodeListView.swift */; };
 		75EA10BC2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10BB2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift */; };
+		75EA10BE2A4E649100DE79C2 /* WotEpisodeListHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10BD2A4E649100DE79C2 /* WotEpisodeListHeaderReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		75EA10B62A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentSearchCoordinator+EpisodesListDelegate.swift"; sourceTree = "<group>"; };
 		75EA10B92A4E582F00DE79C2 /* WotEpisodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotEpisodeListView.swift; sourceTree = "<group>"; };
 		75EA10BB2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotEpisodeListCollectionViewCell.swift; sourceTree = "<group>"; };
+		75EA10BD2A4E649100DE79C2 /* WotEpisodeListHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotEpisodeListHeaderReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +403,7 @@
 			children = (
 				75EA10B92A4E582F00DE79C2 /* WotEpisodeListView.swift */,
 				75EA10BB2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift */,
+				75EA10BD2A4E649100DE79C2 /* WotEpisodeListHeaderReusableView.swift */,
 			);
 			path = WotEpisodeListView;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				75EA10992A4DB4A200DE79C2 /* ContentSearchViewController.swift in Sources */,
 				75EA10A32A4DFCDD00DE79C2 /* ContentDetailViewModel.swift in Sources */,
 				75EA10A72A4E01DA00DE79C2 /* StrContentDetail.swift in Sources */,
+				75EA10BE2A4E649100DE79C2 /* WotEpisodeListHeaderReusableView.swift in Sources */,
 				75EA10AB2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift in Sources */,
 				75EA10932A4D357F00DE79C2 /* StrContentSearch.swift in Sources */,
 				75EA10A52A4E015900DE79C2 /* ContentDetailViewController.swift in Sources */,

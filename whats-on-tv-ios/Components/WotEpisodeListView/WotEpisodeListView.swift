@@ -18,14 +18,14 @@ class WotEpisodeListView: UIView {
     
     private let collectionView: UICollectionView
     private weak var delegate: WotEpisodeListViewDelegate?
-    private var episodes: [Episode]
+    private var seasons: [Season]
     
     // MARK: - Init
     
-    init(episodes: [Episode], delegate: WotEpisodeListViewDelegate?) {
+    init(seasons: [Season], delegate: WotEpisodeListViewDelegate?) {
         self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         self.delegate = delegate
-        self.episodes = episodes
+        self.seasons = seasons
         super.init(frame: .zero)
         
         setupView()
@@ -46,6 +46,7 @@ class WotEpisodeListView: UIView {
     
     private func setupCollectionView() {
         collectionView.register(WotEpisodeListCollectionViewCell.self, forCellWithReuseIdentifier: WotEpisodeListCollectionViewCell.cellIdentifier)
+        collectionView.register(WotEpisodeListHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: WotEpisodeListHeaderReusableView.viewIdentifier)
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -69,8 +70,10 @@ class WotEpisodeListView: UIView {
 
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 10
+        layout.sectionHeadersPinToVisibleBounds = true
         
         layout.itemSize = CGSize(width: itemWidth, height: (itemWidth * 0.4) * 0.6)
+        layout.headerReferenceSize = CGSize(width: itemWidth, height: 40)
         
         return layout
     }
@@ -81,7 +84,9 @@ class WotEpisodeListView: UIView {
 extension WotEpisodeListView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.episodeSelected(episodes[indexPath.row])
+        if let episode = seasons[indexPath.section].episodes?[indexPath.row] {
+            delegate?.episodeSelected(episode)
+        }
     }
 }
 
@@ -89,17 +94,37 @@ extension WotEpisodeListView: UICollectionViewDelegate {
 
 extension WotEpisodeListView: UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return seasons.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return episodes.count
+        return seasons[section].episodes?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: WotEpisodeListCollectionViewCell.cellIdentifier, for: indexPath) as? WotEpisodeListCollectionViewCell else {
+            withReuseIdentifier: WotEpisodeListCollectionViewCell.cellIdentifier, for: indexPath) as? WotEpisodeListCollectionViewCell,
+            let episode = seasons[indexPath.section].episodes?[indexPath.row] else {
             return UICollectionViewCell(frame: .zero)
         }
         
-        cell.setupCell(with: episodes[indexPath.row])
+        cell.setupCell(with: episode)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if (kind == UICollectionView.elementKindSectionHeader) {
+            if let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: WotEpisodeListHeaderReusableView.viewIdentifier,
+                for: indexPath) as? WotEpisodeListHeaderReusableView {
+                
+                header.setupView(with: "\(StrEpisodesList.Season.l) \(seasons[indexPath.section].number)")
+                return header
+            }
+        }
+        
+        return UICollectionReusableView(frame: .zero)
     }
 }
