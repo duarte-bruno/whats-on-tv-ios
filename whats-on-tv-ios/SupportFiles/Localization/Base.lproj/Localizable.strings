@@ -5,3 +5,32 @@
   Created by Bruno Duarte on 28/06/23.
   
 */
+
+// MARK: - StrGeneric
+
+"StrGeneric.Ok" = "Ok";
+"StrGeneric.Ops" = "Ops";
+
+// MARK: - StrError
+
+"StrError.InitCoderNotImplemented" = "init(coder:) has not been implemented.";
+
+// MARK: - StrPopularContentList
+
+"StrPopularContentList.Title" = "Popular";
+
+// MARK: - StrContentSearch
+
+"StrContentSearch.Title" = "Search";
+"StrContentSearch.TypeYourSearch" = "Type your search";
+
+// MARK: - StrContentDetail
+
+"StrContentDetail.Title" = "Details";
+"StrContentDetail.Schedule" = "Schedule";
+"StrContentDetail.SeeEpisodesList" = "See episodes list";
+
+// MARK: - StrEpisodesList
+
+"StrEpisodesList.Title" = "Episodes";
+"StrEpisodesList.Season" = "Season";
