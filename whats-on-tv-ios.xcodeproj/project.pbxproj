@@ -47,6 +47,8 @@
 		75EA10B32A4E54F600DE79C2 /* EpisodesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B22A4E54F600DE79C2 /* EpisodesListViewController.swift */; };
 		75EA10B52A4E561E00DE79C2 /* PopularContentListCoordinator+EpisodesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B42A4E561E00DE79C2 /* PopularContentListCoordinator+EpisodesListDelegate.swift */; };
 		75EA10B72A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B62A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift */; };
+		75EA10BA2A4E582F00DE79C2 /* WotEpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B92A4E582F00DE79C2 /* WotEpisodeListView.swift */; };
+		75EA10BC2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10BB2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		75EA10B22A4E54F600DE79C2 /* EpisodesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListViewController.swift; sourceTree = "<group>"; };
 		75EA10B42A4E561E00DE79C2 /* PopularContentListCoordinator+EpisodesListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularContentListCoordinator+EpisodesListDelegate.swift"; sourceTree = "<group>"; };
 		75EA10B62A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentSearchCoordinator+EpisodesListDelegate.swift"; sourceTree = "<group>"; };
+		75EA10B92A4E582F00DE79C2 /* WotEpisodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotEpisodeListView.swift; sourceTree = "<group>"; };
+		75EA10BB2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotEpisodeListCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +317,7 @@
 		75EA107F2A4CBB9A00DE79C2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				75EA10B82A4E580D00DE79C2 /* WotEpisodeListView */,
 				75EA10802A4CBBB600DE79C2 /* WotContentListView */,
 			);
 			path = Components;
@@ -389,6 +394,15 @@
 				75EA10A02A4DDDD900DE79C2 /* Season.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		75EA10B82A4E580D00DE79C2 /* WotEpisodeListView */ = {
+			isa = PBXGroup;
+			children = (
+				75EA10B92A4E582F00DE79C2 /* WotEpisodeListView.swift */,
+				75EA10BB2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift */,
+			);
+			path = WotEpisodeListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,7 +547,9 @@
 				75EA10672A4C5A7800DE79C2 /* PopularContentListViewModel.swift in Sources */,
 				75EA10692A4C5B8600DE79C2 /* PopularContentListViewController.swift in Sources */,
 				75EA10B32A4E54F600DE79C2 /* EpisodesListViewController.swift in Sources */,
+				75EA10BA2A4E582F00DE79C2 /* WotEpisodeListView.swift in Sources */,
 				75EA10A12A4DDDD900DE79C2 /* Season.swift in Sources */,
+				75EA10BC2A4E584E00DE79C2 /* WotEpisodeListCollectionViewCell.swift in Sources */,
 				75EA107A2A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift in Sources */,
 				75EA10832A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift in Sources */,
 				75EA10B72A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift in Sources */,
