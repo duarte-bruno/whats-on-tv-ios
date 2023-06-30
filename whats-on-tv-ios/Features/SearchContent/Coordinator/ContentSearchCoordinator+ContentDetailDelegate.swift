@@ -23,6 +23,6 @@ extension ContentSearchCoordinator: ContentDetailDelegate {
     }
     
     func seeEpisodesList(contentDetail: ContentDetail) {
-        // TODO: Show episodes
+        showNext(screen: .episodesList(contentDetail))
     }
 }

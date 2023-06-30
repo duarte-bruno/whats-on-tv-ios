@@ -42,6 +42,11 @@
 		75EA10A92A4E038100DE79C2 /* PopularContentListCoordinator+ContentDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10A82A4E038100DE79C2 /* PopularContentListCoordinator+ContentDetailDelegate.swift */; };
 		75EA10AB2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10AA2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift */; };
 		75EA10AD2A4E3C8700DE79C2 /* ContentSearchCoordinator+ContentDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10AC2A4E3C8700DE79C2 /* ContentSearchCoordinator+ContentDetailDelegate.swift */; };
+		75EA10AF2A4E526B00DE79C2 /* EpisodesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10AE2A4E526B00DE79C2 /* EpisodesListViewModel.swift */; };
+		75EA10B12A4E540800DE79C2 /* StrEpisodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B02A4E540800DE79C2 /* StrEpisodesList.swift */; };
+		75EA10B32A4E54F600DE79C2 /* EpisodesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B22A4E54F600DE79C2 /* EpisodesListViewController.swift */; };
+		75EA10B52A4E561E00DE79C2 /* PopularContentListCoordinator+EpisodesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B42A4E561E00DE79C2 /* PopularContentListCoordinator+EpisodesListDelegate.swift */; };
+		75EA10B72A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA10B62A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +106,11 @@
 		75EA10A82A4E038100DE79C2 /* PopularContentListCoordinator+ContentDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularContentListCoordinator+ContentDetailDelegate.swift"; sourceTree = "<group>"; };
 		75EA10AA2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentDetailViewController+Views.swift"; sourceTree = "<group>"; };
 		75EA10AC2A4E3C8700DE79C2 /* ContentSearchCoordinator+ContentDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentSearchCoordinator+ContentDetailDelegate.swift"; sourceTree = "<group>"; };
+		75EA10AE2A4E526B00DE79C2 /* EpisodesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListViewModel.swift; sourceTree = "<group>"; };
+		75EA10B02A4E540800DE79C2 /* StrEpisodesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrEpisodesList.swift; sourceTree = "<group>"; };
+		75EA10B22A4E54F600DE79C2 /* EpisodesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListViewController.swift; sourceTree = "<group>"; };
+		75EA10B42A4E561E00DE79C2 /* PopularContentListCoordinator+EpisodesListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopularContentListCoordinator+EpisodesListDelegate.swift"; sourceTree = "<group>"; };
+		75EA10B62A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentSearchCoordinator+EpisodesListDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +249,7 @@
 				75EA10682A4C5B8600DE79C2 /* PopularContentListViewController.swift */,
 				75EA10A42A4E015900DE79C2 /* ContentDetailViewController.swift */,
 				75EA10AA2A4E221C00DE79C2 /* ContentDetailViewController+Views.swift */,
+				75EA10B22A4E54F600DE79C2 /* EpisodesListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +259,7 @@
 			children = (
 				75EA10662A4C5A7800DE79C2 /* PopularContentListViewModel.swift */,
 				75EA10A22A4DFCDD00DE79C2 /* ContentDetailViewModel.swift */,
+				75EA10AE2A4E526B00DE79C2 /* EpisodesListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,6 +294,7 @@
 			children = (
 				75EA10762A4C728100DE79C2 /* StrPopularContentList.swift */,
 				75EA10A62A4E01DA00DE79C2 /* StrContentDetail.swift */,
+				75EA10B02A4E540800DE79C2 /* StrEpisodesList.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -292,6 +305,7 @@
 				75EA105C2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift */,
 				75EA10792A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift */,
 				75EA10A82A4E038100DE79C2 /* PopularContentListCoordinator+ContentDetailDelegate.swift */,
+				75EA10B42A4E561E00DE79C2 /* PopularContentListCoordinator+EpisodesListDelegate.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -330,6 +344,7 @@
 				75EA10902A4D344600DE79C2 /* ContentSearchCoordinator.swift */,
 				75EA10962A4DB2B200DE79C2 /* ContentSearchCoordinator+ContentSearchViewModelDelegate.swift */,
 				75EA10AC2A4E3C8700DE79C2 /* ContentSearchCoordinator+ContentDetailDelegate.swift */,
+				75EA10B62A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -514,11 +529,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				75EA105D2A4BA19C00DE79C2 /* PopularContentListCoordinator.swift in Sources */,
+				75EA10B12A4E540800DE79C2 /* StrEpisodesList.swift in Sources */,
 				75EA10672A4C5A7800DE79C2 /* PopularContentListViewModel.swift in Sources */,
 				75EA10692A4C5B8600DE79C2 /* PopularContentListViewController.swift in Sources */,
+				75EA10B32A4E54F600DE79C2 /* EpisodesListViewController.swift in Sources */,
 				75EA10A12A4DDDD900DE79C2 /* Season.swift in Sources */,
 				75EA107A2A4C7AE500DE79C2 /* PopularContentListCoordinator+PopularContentListDelegate.swift in Sources */,
 				75EA10832A4CBBC400DE79C2 /* WotContentListCollectionViewCell.swift in Sources */,
+				75EA10B72A4E56BC00DE79C2 /* ContentSearchCoordinator+EpisodesListDelegate.swift in Sources */,
+				75EA10AF2A4E526B00DE79C2 /* EpisodesListViewModel.swift in Sources */,
 				75EA10952A4D399900DE79C2 /* ContentSearchViewModel.swift in Sources */,
 				75EA10772A4C728100DE79C2 /* StrPopularContentList.swift in Sources */,
 				75EA10A92A4E038100DE79C2 /* PopularContentListCoordinator+ContentDetailDelegate.swift in Sources */,
@@ -538,6 +557,7 @@
 				752724132A49F2C4002A277C /* SceneDelegate.swift in Sources */,
 				75EA10652A4C56F700DE79C2 /* Content.swift in Sources */,
 				75EA109C2A4DD59B00DE79C2 /* ContentService.swift in Sources */,
+				75EA10B52A4E561E00DE79C2 /* PopularContentListCoordinator+EpisodesListDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

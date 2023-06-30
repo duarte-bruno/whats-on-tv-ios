@@ -23,7 +23,7 @@ protocol ContentDetailDelegate: AnyObject {
 
 protocol ContentDetailViewModelProtocol: WotViewModelProtocol {
     
-    /// A list of content to be displayed
+    /// Content to be displayed
     var contentDetail: ContentDetail? { get }
     
     init(contentId: Int, delegate: ContentDetailDelegate?)

@@ -30,6 +30,7 @@ class PopularContentListCoordinator: WotCoordinator {
     enum Screen {
         case popularContentList
         case contentDetail(_ content: Content)
+        case episodesList(_ contentDetail: ContentDetail)
     }
     
     // MARK: - Init
@@ -77,6 +78,10 @@ class PopularContentListCoordinator: WotCoordinator {
         case .contentDetail(let content):
             let viewModel = ContentDetailViewModel(contentId: content.id, delegate: self)
             let controller = ContentDetailViewController(viewModel: viewModel)
+            return controller
+        case .episodesList(let contentDetail):
+            let viewModel = EpisodesListViewModel(contentDetail: contentDetail, delegate: self)
+            let controller = EpisodesListViewController(viewModel: viewModel)
             return controller
         }
     }
